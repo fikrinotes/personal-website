@@ -136,7 +136,7 @@ export default function ProjectPage() {
                             <p>STATUS: ONLINE (V1.0) | LAST UPDATE: 06-08-2021</p>
                             <p>Apikasi web yang dikembangkan untuk menyelesaikan sistem persamaan linear (SPL) 2, 3 variabel, dan persamaan kuadrat. Proyek ini berfokus pada implementasi konsep aljabar linier untuk perhitungan solusi yang efisien.</p>
                             <div className="cta-group">
-                                <a href="https://fikrinotes.netlify.app/javascriptproject-menu/boring_math/">VIEW DEMO [ &gt;&gt; ]</a>
+                                <a href="https://fikrinotes.netlify.app/javascriptproject-menu/boring_math/">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/Boring_math">GITHUB SOURCE [ &gt;&gt; ]</a>
                             </div>
                         </div>
