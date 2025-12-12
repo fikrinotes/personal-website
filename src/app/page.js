@@ -40,17 +40,17 @@ export default function Home() {
           {/* <!-- GRID PROYEK (BRUTALIST CARDS) --> */}
           <section className="projects-grid">
               {/* <!-- Kartu Proyek 1 --> */}
-              <ProjectCard title="Weather App" description="Aplikasi web pertama yang menggunakan data API eksternal. Berfungsi menampilkan kondisi cuaca global secara *real-time*." projectUrl="#" />
+              <ProjectCard title="Intrusion Detection Model" description="AModel Deep Neural Network (DNN) untuk deteksi intrusi pada jaringan menggunakan Python dengan framework Tensorflow dan scikit-learn." projectUrl="https://github.com/fikrinotes/DNN-IDS" />
               {/* <!-- Kartu Proyek 2 --> */}
-              <ProjectCard title="BMI Calculator" description="Aplikasi web utilitas untuk menghitung Indeks Massa Tubuh (BMI) secara instan berdasarkan input berat dan tinggi badan." projectUrl="#" />
+              <ProjectCard title="Eid Blessing Hunter Game" description="AGame interaktif bertema Idul Fitri yang dirancang untuk memeriahkan perayaan Idul Fitri 2025. " projectUrl="https://fikrinotes.github.io/eid-blessing-hunter-game/" />
               {/* <!-- Kartu Proyek 3 --> */}
-              <ProjectCard title="Caesar Cipher" description="Program sederhana yang berfungsi untuk melakukan enkripsi dan dekripsi pesan menggunakan metode sandi Caesar." projectUrl="#" />
+              <ProjectCard title="Intergalactic War" description="Game sederhana yang dibangun menggunakan JavaScript dengan konsep perang antara manusia dan alien. " projectUrl="https://fikrinotes.netlify.app/javascriptproject-menu/intergalacticwar/" />
               {/* <!-- Kartu Proyek 4 --> */}
-              <ProjectCard title="Math Solver" description="Aplikasi untuk menyelesaikan persamaan linear dengan dua dan tiga variabel secara otomatis. Memanfaatkan logika pemrograman Python." projectUrl="#" />
+              <ProjectCard title="Boring Math" description="Apikasi web yang dikembangkan untuk menyelesaikan sistem persamaan linear (SPL) 2, 3 variabel, dan persamaan kuadrat." projectUrl="https://fikrinotes.netlify.app/javascriptproject-menu/boring_math/" />
               {/* <!-- Kartu Proyek 5 --> */}
-              <ProjectCard title="Intergalactic War" description="Game arcade sederhana dengan tema perang antargalaksi yang dibangun menggunakan JavaScript dan HTML Canvas." projectUrl="#" />
+              <ProjectCard title="Hill Cipher Encryption App" description="Sebuah aplikasi berbasis desktop untuk enkripsi pesan menggunakan metode Hill Cipher. Dikembangkan dengan bahasa pemrograman Python." projectUrl="https://github.com/fikrinotes/PowerfulPython/tree/main/Encryption%20App" />
               {/* <!-- Kartu Proyek 6 --> */}
-              <ProjectCard title="Donkey.js Game" description="Game arcade sederhana di mana pemain harus terus berkendara sambil menghindari keledai yang akan menghalangi jalan." projectUrl="#" />
+              <ProjectCard title="Daily Workout App" description="Satu-satunya aplikasi saya yang dikembangkan sepenuhnya oleh AI Gemini. Memiliki fitur jadwal olahraga harian, asupan nutrisi yang diperlukan, dan statistik harian." projectUrl="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/workout-app" />
           </section>
           
           {/* <!-- LOGS JOURNEY SECTION (TIMELINE) --> */}

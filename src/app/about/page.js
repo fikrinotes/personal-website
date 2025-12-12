@@ -59,7 +59,7 @@ export default function About() {
                             <div className="social-links">
                                 <a href="https://github.com/fikrinotes">GITHUB</a>
                                 <a href="https://www.linkedin.com/in/fikri-mulyana-setiawan">LINKEDIN</a>
-                                <a href="#">CONTACT</a>
+                                <a href="https://www.instagram.com/fikrimulyana_s">CONTACT</a>
                             </div>
                         </div>
                     </div>

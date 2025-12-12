@@ -74,7 +74,7 @@ export default function ProjectPage() {
                         {/* <!-- DETAIL CARD 3: INTERGALACTIC WAR --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
-                                <h3>PROJECT ID: INTERGALACTIC WAR</h3>
+                                <h3>INTERGALACTIC WAR</h3>
                                 <div className="project-tags">
                                     <span>JAVASCRIPT</span>
                                     <span>GAME DEV</span>

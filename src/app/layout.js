@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       content="JJt8s-bShfClSaIksS6BEHrJq7gFqDScaqKzsULaaH4"
     />
     <meta charSet="utf-8" />
-    <meta name="theme-color" content="#4E5054" />
+    <meta name="theme-color" content="#0A192F" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {/* Primary Meta Tags */}
     <title>Fikri Notes - Thought And Ideas Of Fikri Mulyana Setiawan</title>
@@ -23,11 +23,11 @@ export default function RootLayout({ children }) {
     />
     <meta
       name="description"
-      content="Fikri Mulyana Setiawan is a programmer and front-end developer, and I like to automate everything with my programming skills."
+      content="Fikri Mulyana Setiawan is a machine learning enthusiast, programmer and front-end developer."
     />
     {/* Open Graph / Facebook */}
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://fikrinotes.netlify.app/" />
+    <meta property="og:url" content="https://fikrinotes.vercel.app/" />
     <meta
       property="og:title"
       content="Fikri Notes - Thought And Ideas Of Fikri Mulyana Setiawan "
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
     />
     {/* Twitter */}
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://fikrinotes.netlify.app/" />
+    <meta property="twitter:url" content="https://fikrinotes.vercel.app/" />
     <meta
       property="twitter:title"
       content="Fikri Notes - Thought And Ideas Of Fikri Mulyana Setiawan"
