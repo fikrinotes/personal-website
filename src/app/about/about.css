@@ -133,6 +133,7 @@ nav a {
     padding: 30px;
     box-shadow: 6px 6px 0px var(--accent-color);
     align-items: flex-start;
+    overflow: hidden; /* Cegah konten keluar dari border */
 }
 
 .profile-photo {
@@ -149,26 +150,36 @@ nav a {
 
 .profile-details {
     flex-grow: 1;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    min-width: 0; /* Penting untuk flex items agar bisa shrink */
 }
 
 .profile-details h2 {
     font-size: 1.8em;
     color: var(--text-color);
     margin-bottom: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .social-links {
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .social-links a {
     font-family: var(--font-h);
     background-color: var(--accent-color);
     color: var(--dark-text);
-    padding: 5px 10px;
-    margin-right: 10px;
+    padding: 8px 15px;
     font-size: 0.8em;
     letter-spacing: 1px;
+    white-space: nowrap; /* Cegah teks tombol terpotong */
+    flex-shrink: 0; /* Cegah tombol mengecil */
 }
 
 /* --- Timeline History (Digunakan untuk Edukasi/Karir) --- */
@@ -276,8 +287,16 @@ footer p {
 
     /* About */
     .about-header h1 { font-size: 2em; }
-    .profile-info { flex-direction: column; text-align: center; }
+    .profile-info { 
+        flex-direction: column; 
+        text-align: center;
+        gap: 20px;
+        padding: 20px; /* Kurangi padding pada mobile */
+    }
     .profile-photo { margin: 0 auto 20px; }
+    .profile-details h2 {
+        font-size: 1.4em; /* Kurangi ukuran font pada mobile */
+    }
     .history-entry { padding-left: 15px; }
     .history-entry::before { left: -10px; }
 }
