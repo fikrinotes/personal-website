@@ -40,9 +40,9 @@ export default function Home() {
           {/* <!-- GRID PROYEK (BRUTALIST CARDS) --> */}
           <section className="projects-grid">
               {/* <!-- Kartu Proyek 1 --> */}
-              <ProjectCard title="Intrusion Detection Model" description="AModel Deep Neural Network (DNN) untuk deteksi intrusi pada jaringan menggunakan Python dengan framework Tensorflow dan scikit-learn." projectUrl="https://github.com/fikrinotes/DNN-IDS" />
+              <ProjectCard title="Intrusion Detection Model" description="Model Deep Neural Network (DNN) untuk deteksi intrusi pada jaringan menggunakan Python dengan framework Tensorflow dan scikit-learn." projectUrl="https://github.com/fikrinotes/DNN-IDS" />
               {/* <!-- Kartu Proyek 2 --> */}
-              <ProjectCard title="Eid Blessing Hunter Game" description="AGame interaktif bertema Idul Fitri yang dirancang untuk memeriahkan perayaan Idul Fitri 2025. " projectUrl="https://fikrinotes.github.io/eid-blessing-hunter-game/" />
+              <ProjectCard title="Eid Blessing Hunter Game" description="Game interaktif bertema Idul Fitri yang dirancang untuk memeriahkan perayaan Idul Fitri 2025. " projectUrl="https://fikrinotes.github.io/eid-blessing-hunter-game/" />
               {/* <!-- Kartu Proyek 3 --> */}
               <ProjectCard title="Intergalactic War" description="Game sederhana yang dibangun menggunakan JavaScript dengan konsep perang antara manusia dan alien. " projectUrl="https://fikrinotes.netlify.app/javascriptproject-menu/intergalacticwar/" />
               {/* <!-- Kartu Proyek 4 --> */}
