@@ -393,6 +393,15 @@
 .log-status {
     display: flex;
     gap: 12px;
+    font-weight: 900;
+}
+
+.log-status.ok {
+    color: var(--green);
+}
+
+.log-status.fail {
+    color: var(--red);
 }
 
 .log-status-badge {
