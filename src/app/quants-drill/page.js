@@ -220,7 +220,7 @@ export default function QuantsDrill() {
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
               <BrainCircuit size={48} color="var(--blue-500)" />
             </div>
-            <h1 style={{ color: 'white', fontWeight: 900, fontSize: '28px', marginBottom: '8px', letterSpacing: '-0.05em' }}>QUANTS DRILLS</h1>
+            <h1 style={{ color: 'white', fontWeight: 900, fontSize: '28px', marginBottom: '8px', letterSpacing: '-0.05em' }}>QUANTS DRILL PRO</h1>
             <p style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--zinc-600)', marginBottom: '40px', letterSpacing: '0.2em' }}>SESSIONS RECORDED: {totalSessions}</p>
             
             <div className="mode-grid">
