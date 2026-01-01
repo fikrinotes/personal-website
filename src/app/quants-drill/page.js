@@ -93,26 +93,6 @@ export default function App() {
   const inputRef = useRef(null);
   const lowerRef = useRef(null);
 
-  // Update theme-color for mobile
-  useEffect(() => {
-    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    const originalColor = metaThemeColor ? metaThemeColor.getAttribute('content') : '#0A192F';
-    
-    if (!metaThemeColor) {
-      metaThemeColor = document.createElement('meta');
-      metaThemeColor.name = 'theme-color';
-      document.head.appendChild(metaThemeColor);
-    }
-    
-    metaThemeColor.setAttribute('content', '#050505');
-    
-    return () => {
-      if (metaThemeColor) {
-        metaThemeColor.setAttribute('content', originalColor);
-      }
-    };
-  }, []);
-
   // Persistence (Load Data)
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
