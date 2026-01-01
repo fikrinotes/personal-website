@@ -1,36 +1,80 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import Image from "next/image";
 import { 
-  TrendingUp, 
-  Zap, 
-  History, 
-  ShieldCheck, 
-  Trash2, 
-  BarChart3, 
-  BrainCircuit 
+  TrendingUp, Zap, Trash2, BarChart3, BrainCircuit, Clock, Activity 
 } from 'lucide-react';
 
-// Impor file CSS yang berisi class terminal-container dan reset-btn
-import "./quants-drill.css";
-
-// Impor pengaturan dan bahasa
-import { GAME_DURATION, INITIAL_ELO, STORAGE_KEY } from "@/lib/constants";
-import { translations } from "@/lib/translations";
+// import style
+import './quants-drill.css';
 
 /**
- * Komponen QuantsDrill
- * Menggunakan state React untuk mengelola permainan matematika kuantitatif.
+ * QUANT DRILL v15.7 - ZERO INLINE STYLE EDITION
+ * Perbaikan: Menghapus 100% inline styles dan memindahkannya ke tag <style>.
+ * Fitur: Label lengkap (LEVEL, STREAK, AKURASI), Terjemahan ID/EN, Responsif Mobile.
  */
-export default function QuantsDrill() {
-  // --- State Utama ---
+
+const GAME_DURATION = 120;
+const INITIAL_ELO = 1000;
+const STORAGE_KEY = 'quant_drill_v15_final';
+
+const translations = {
+  EN: {
+    start: "INITIATE SESSION",
+    time: "LIMIT",
+    hint: "Accuracy is survival",
+    level: "LEVEL",
+    streak: "STREAK",
+    accuracy: "ACCURACY",
+    arithmetic: "Arithmetic",
+    arithmeticDesc: "Speed operations",
+    estimation: "Estimation",
+    estimationDesc: "Interval confidence",
+    fraction: "Fractions",
+    fractionDesc: "Decimal conv (4 dec)",
+    probability: "Probability",
+    probabilityDesc: "Risk & EV (3 dec)",
+    avgSpeed: "Latency",
+    totalSolved: "Executed",
+    reset: "Format Terminal",
+    confirmReset: "Are you sure? All data will be wiped.",
+    fracHint: "Maximum 4 decimal places",
+    probHint: "Use 3 decimal places",
+    telemetry: "TELEMETRY",
+    sysData: "DATA"
+  },
+  ID: {
+    start: "MULAI SESI",
+    time: "WAKTU",
+    hint: "Akurasi adalah segalanya",
+    level: "LEVEL",
+    streak: "STREAK",
+    accuracy: "AKURASI",
+    arithmetic: "Aritmatika",
+    arithmeticDesc: "Operasi kecepatan",
+    estimation: "Estimasi",
+    estimationDesc: "Rentang kepercayaan",
+    fraction: "Pecahan",
+    fractionDesc: "Konversi (4 desimal)",
+    probability: "Probabilitas",
+    probabilityDesc: "Risiko & EV (3 desimal)",
+    avgSpeed: "Latensi",
+    totalSolved: "Tereksekusi",
+    reset: "Reset Terminal",
+    confirmReset: "Apakah Anda yakin? Semua data akan dihapus.",
+    fracHint: "Maksimal 4 angka desimal",
+    probHint: "Gunakan 3 angka desimal",
+    telemetry: "TELEMETRI",
+    sysData: "DATA"
+  }
+};
+
+export default function App() {
   const [lang, setLang] = useState('ID');
   const [elo, setElo] = useState(INITIAL_ELO);
   const [bestElo, setBestElo] = useState(INITIAL_ELO);
   const [totalSessions, setTotalSessions] = useState(0);
-  
-  const [gameState, setGameState] = useState('IDLE'); // IDLE, PLAYING
+  const [gameState, setGameState] = useState('IDLE');
   const [mode, setMode] = useState('ARITHMETIC');
   const [timeLeft, setTimeLeft] = useState(GAME_DURATION);
   const [score, setScore] = useState(0);
@@ -38,18 +82,17 @@ export default function QuantsDrill() {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [history, setHistory] = useState([]);
   const [streak, setStreak] = useState(0);
-
-  // State untuk Input User
   const [mainInput, setMainInput] = useState('');
   const [lowerBound, setLowerBound] = useState('');
   const [upperBound, setUpperBound] = useState('');
+  const [isErrorFlash, setIsErrorFlash] = useState(false);
 
   const t = translations[lang];
   const startTimeRef = useRef(null);
   const inputRef = useRef(null);
   const lowerRef = useRef(null);
 
-  // --- Memuat Data dari LocalStorage ---
+  // Load Data
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
@@ -59,28 +102,25 @@ export default function QuantsDrill() {
         setBestElo(parsed.bestElo || INITIAL_ELO);
         setTotalSessions(parsed.totalSessions || 0);
         setLang(parsed.lang || 'ID');
-      } catch (e) {
-        console.error("Gagal memuat data:", e);
-      }
+      } catch (e) { console.error(e); }
     }
   }, []);
 
-  // --- Menyimpan Data ke LocalStorage ---
+  // Save Data
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({ elo, bestElo, totalSessions, lang }));
   }, [elo, bestElo, totalSessions, lang]);
 
-  // --- Logika Pembuatan Soal ---
   const generateQuestion = useCallback(() => {
-    const scale = 1 + (level * 0.25);
+    const scale = 1 + (level * 0.4);
     let q = { text: '', answer: null, hint: t.hint };
 
     if (mode === 'ARITHMETIC') {
       const ops = ['+', '-', '*', '/'];
       const op = ops[Math.floor(Math.random() * ops.length)];
       let a, b;
-      if (op === '+') { a = Math.floor(Math.random() * (100 * scale)) + 10; b = Math.floor(Math.random() * (100 * scale)) + 10; q.answer = a + b; }
-      else if (op === '-') { a = Math.floor(Math.random() * (150 * scale)) + 20; b = Math.floor(Math.random() * a); q.answer = a - b; }
+      if (op === '+') { a = Math.floor(Math.random() * (150 * scale)) + 10; b = Math.floor(Math.random() * (150 * scale)) + 10; q.answer = a + b; }
+      else if (op === '-') { a = Math.floor(Math.random() * (250 * scale)) + 20; b = Math.floor(Math.random() * a); q.answer = a - b; }
       else if (op === '*') { a = Math.floor(Math.random() * 12) + 2; b = Math.floor(Math.random() * (20 * scale)) + 2; q.answer = a * b; }
       else { b = Math.floor(Math.random() * 12) + 2; q.answer = Math.floor(Math.random() * (15 * scale)) + 1; a = b * q.answer; }
       q.text = `${a} ${op === '*' ? '×' : op === '/' ? '÷' : op} ${b}`;
@@ -96,22 +136,26 @@ export default function QuantsDrill() {
         const base = Math.floor(Math.random() * 900000) + 100000;
         q.text = `Est: √${base.toLocaleString()}`; q.answer = Math.round(Math.sqrt(base));
       } else {
-        const base = 2; const exp = Math.floor(Math.random() * 5) + 8;
-        q.text = `Est: ${base}^${exp}`; q.answer = Math.pow(base, exp);
+        const b = 2; const exp = Math.floor(Math.random() * 4) + 8;
+        q.text = `Est: ${b}^${exp}`; q.answer = Math.pow(b, exp);
       }
       q.hint = lang === 'ID' ? "Rentang [Bawah, Atas]" : "Range [Lower, Upper]";
     }
     else if (mode === 'FRACTION') {
-      const denoms = [2, 4, 8, 16, 20, 40, 80];
+      const denoms = [4, 5, 8, 10, 16, 20, 25, 40, 50];
       const d = denoms[Math.floor(Math.random() * denoms.length)];
       const n = Math.floor(Math.random() * (d - 1)) + 1;
-      q.text = `Conv: ${n}/${d}`; q.answer = Number((n / d).toFixed(4));
+      q.text = `Conv: ${n}/${d}`; 
+      q.answer = Number((n / d).toFixed(4));
+      q.hint = t.fracHint;
     }
     else if (mode === 'PROBABILITY') {
-      const target = Math.floor(Math.random() * 3) + 7;
-      q.text = `P(Sum 2 dice = ${target})`;
-      const map = { 7: 0.166, 8: 0.138, 9: 0.111 };
-      q.answer = map[target]; q.hint = "3 desimal";
+      const targets = [7, 8, 9, 10, 11];
+      const target = targets[Math.floor(Math.random() * targets.length)];
+      q.text = `P(Dice Sum = ${target})`;
+      const map = { 7: 0.167, 8: 0.139, 9: 0.111, 10: 0.083, 11: 0.056 };
+      q.answer = map[target];
+      q.hint = t.probHint;
     }
 
     setCurrentQuestion(q);
@@ -120,14 +164,13 @@ export default function QuantsDrill() {
         if (mode === 'ESTIMATION') lowerRef.current?.focus();
         else inputRef.current?.focus();
     }, 50);
-  }, [mode, level, lang, t.hint]);
+  }, [mode, level, t.hint, t.fracHint, t.probHint, lang]);
 
-  // --- Logika Pemrosesan Jawaban ---
   const processAnswer = (isCorrect) => {
     const latency = (Date.now() - startTimeRef.current) / 1000;
-    const K = 32;
+    const K = isCorrect ? 24 : 80; 
     const expected = 1 / (1 + Math.pow(10, (1200 - elo) / 400));
-    const bonus = isCorrect ? Math.max(0, (2 - latency) * 10) : 0;
+    const bonus = isCorrect ? Math.max(0, (2 - latency) * 15) : 0;
     const newElo = Math.round(elo + K * ((isCorrect ? 1 : 0) - expected) + bonus);
     
     setElo(newElo);
@@ -137,125 +180,147 @@ export default function QuantsDrill() {
       setScore(s => s + 1); setStreak(st => st + 1);
       setHistory(prev => [{ q: currentQuestion.text, status: 'SUCCESS', latency }, ...prev].slice(0, 10));
     } else {
-      setStreak(0); setTimeLeft(prev => Math.max(0, prev - 5));
+      setStreak(0);
+      setIsErrorFlash(true);
+      setTimeout(() => setIsErrorFlash(false), 200);
+      setTimeLeft(prev => Math.max(0, prev - 10));
       setHistory(prev => [{ q: currentQuestion.text, status: 'FAILED', latency }, ...prev].slice(0, 10));
     }
 
     setMainInput(''); setLowerBound(''); setUpperBound('');
-    setLevel(Math.max(1, Math.min(10, Math.floor((newElo - 800) / 200) + 1)));
+    setLevel(Math.max(1, Math.min(10, Math.floor((newElo - 800) / 150) + 1)));
     generateQuestion();
   };
 
   const startGame = () => {
     setGameState('PLAYING'); setTimeLeft(GAME_DURATION); setScore(0); setStreak(0); setHistory([]);
     setTotalSessions(s => s + 1);
-    generateQuestion();
+    setTimeout(() => generateQuestion(), 0);
   };
 
-  const resetData = () => {
-    if (confirm(t.confirmReset)) {
-      localStorage.removeItem(STORAGE_KEY);
-      window.location.reload();
-    }
-  };
-
-  // Timer Effect
   useEffect(() => {
     let timer = null;
     if (gameState === 'PLAYING' && timeLeft > 0) {
-      timer = setInterval(() => setTimeLeft(t => t - 1), 1000);
+      timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
     } else if (timeLeft === 0 && gameState === 'PLAYING') {
       setGameState('IDLE');
     }
     return () => clearInterval(timer);
   }, [gameState, timeLeft]);
 
-  // Statistik Rata-rata
-  const avgSpeed = history.length > 0 
-    ? (history.reduce((a, b) => a + b.latency, 0) / history.length).toFixed(2) 
-    : '0.00';
+  const handleInputChange = (e) => {
+    const val = e.target.value;
+    setMainInput(val);
+    if (gameState === 'PLAYING' && mode !== 'ESTIMATION') {
+      const numVal = parseFloat(val);
+      if (!isNaN(numVal) && numVal === currentQuestion?.answer) {
+        processAnswer(true);
+      }
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      const val = parseFloat(mainInput);
+      if (!isNaN(val)) {
+        processAnswer(Math.abs(val - currentQuestion.answer) < 0.0001);
+      }
+    }
+  };
+
+  const handleEstKey = (e) => {
+    if (e.key === 'Enter') {
+      const low = parseFloat(lowerBound);
+      const high = parseFloat(upperBound);
+      if (!isNaN(low) && !isNaN(high)) {
+        processAnswer(currentQuestion.answer >= low && currentQuestion.answer <= high);
+      }
+    }
+  };
+
+  const avgSpeed = history.length > 0 ? (history.reduce((a,b) => a + b.latency, 0) / history.length).toFixed(2) : '0.00';
+  const accuracy = history.length > 0 ? (history.filter(h => h.status === 'SUCCESS').length / history.length * 100).toFixed(0) + '%' : '100%';
 
   return (
-    <div className="terminal-container">
-      {/* Navbar Atas */}
-      <nav className="navbar">
-        <div className="navbar-content">
-          <div className="logo-text">
-             <TrendingUp size={14} color="var(--blue-500)" />
-             <span>QUANTS DRILL PRO</span>
-          </div>
-          <div style={{ display: 'flex', gap: '8px' }}>
-            <button className={`lang-btn ${lang === 'EN' ? 'active' : ''}`} onClick={() => setLang('EN')}>EN</button>
-            <button className={`lang-btn ${lang === 'ID' ? 'active' : ''}`} onClick={() => setLang('ID')}>ID</button>
-          </div>
-        </div>
-      </nav>
+    <div className={`terminal-container ${isErrorFlash ? 'flash-red' : ''}`}>
+      <header className="header-system">
+        <nav className="navbar">
+          <div className="navbar-content">
+            <div className="logo">
+              <TrendingUp size={18} />
+              Quant <span>Drill</span>
+            </div>
+            
+            {gameState === 'PLAYING' && (
+              <div className={`timer-nav ${timeLeft < 15 ? 'timer-crit' : ''}`}>
+                <Clock size={14} /> {timeLeft}s
+              </div>
+            )}
 
-      {/* Dashboard Stats (HUD) */}
-      <div className="hud-grid">
-        <div className="stat-box">
-          <div className="stat-label">ELO RATING</div>
-          <div className="stat-value" style={{ color: 'var(--blue-500)' }}>{elo}</div>
-          <div className="stat-sub">BEST: {bestElo}</div>
-        </div>
-        <div className="stat-box">
-          <div className="stat-label">{t.level}</div>
-          <div className="stat-value" style={{ color: 'var(--amber-500)' }}>{level}</div>
-          <div className="stat-sub">Adaptive</div>
-        </div>
-        <div className="stat-box">
-          <div className="stat-label">{t.streak}</div>
-          <div className="stat-value" style={{ color: 'var(--purple-500)' }}>{streak}</div>
-          <div className="stat-sub">Multiplier</div>
-        </div>
-        <div className="stat-box" style={{ textAlign: 'center' }}>
-          <div className="stat-label">{t.time}</div>
-          <div className={`stat-value ${timeLeft < 15 ? 'timer-critical' : ''}`}>{timeLeft}s</div>
-        </div>
-      </div>
+            <div className="lang-switcher">
+              <button className={`lang-btn ${lang==='EN'?'active':''}`} onClick={()=>setLang('EN')}>EN</button>
+              <button className={`lang-btn ${lang==='ID'?'active':''}`} onClick={()=>setLang('ID')}>ID</button>
+            </div>
+          </div>
+        </nav>
 
-      <main className="game-main">
+        <div className="hud-grid">
+          <div className="stat-box">
+            <div className="stat-label">ELO RATING</div>
+            <div className="stat-value elo">{elo}</div>
+          </div>
+          <div className="stat-box">
+            <div className="stat-label">{t.level}</div>
+            <div className="stat-value lvl">{level}</div>
+          </div>
+          <div className="stat-box">
+            <div className="stat-label">{t.streak}</div>
+            <div className="stat-value streak">{streak}</div>
+          </div>
+          <div className="stat-box">
+            <div className="stat-label">{t.accuracy}</div>
+            <div className="stat-value accuracy">{accuracy}</div>
+          </div>
+        </div>
+      </header>
+
+      <main className="main-view">
         {gameState === 'IDLE' ? (
           <div className="menu-card">
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
-              <BrainCircuit size={48} color="var(--blue-500)" />
+            <div className="menu-icon-container">
+              <BrainCircuit size={48} color="var(--blue)" />
             </div>
-            <h1 style={{ color: 'white', fontWeight: 900, fontSize: '28px', marginBottom: '8px', letterSpacing: '-0.05em' }}>QUANTS DRILL PRO</h1>
-            <p style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--zinc-600)', marginBottom: '40px', letterSpacing: '0.2em' }}>SESSIONS RECORDED: {totalSessions}</p>
-            
-            <div className="mode-grid">
+            <h1 className="menu-title">Quant <span>Drill</span></h1>
+            <div className="mode-list">
               {['ARITHMETIC', 'ESTIMATION', 'FRACTION', 'PROBABILITY'].map(m => (
-                <button key={m} className={`mode-btn ${mode === m ? 'selected' : ''}`} onClick={() => setMode(m)}>
-                  <div className="mode-title">{t[m.toLowerCase()]}</div>
-                  <div className="mode-desc">{t[m.toLowerCase() + 'Desc']}</div>
+                <button key={m} className={`mode-btn ${mode === m ? 'active' : ''}`} onClick={() => setMode(m)}>
+                  <div className="mode-btn-title">{t[m.toLowerCase()]}</div>
+                  <div className="mode-btn-desc">{t[m.toLowerCase() + 'Desc']}</div>
                 </button>
               ))}
             </div>
-
-            <button onClick={startGame} className="btn-execute">
-              {t.start} <Zap size={20} fill="currentColor" />
+            <button onClick={startGame} className="btn-start">
+              {t.start} <Zap size={16} fill="currentColor" />
             </button>
           </div>
         ) : (
-          <div style={{ width: '100%', maxWidth: '800px', textAlign: 'center' }}>
-            <p style={{ color: 'var(--zinc-600)', fontSize: '10px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: '16px' }}>Signal Inbound</p>
-            <h2 className="question-text">{currentQuestion?.text}</h2>
-            <p style={{ color: 'var(--blue-500)', fontSize: '12px', fontWeight: 900, textTransform: 'uppercase', marginBottom: '40px' }}>{currentQuestion?.hint}</p>
-
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className="question-container">
+            <div>
+              <h2 className="question-text">{currentQuestion?.text}</h2>
+              <p className="hint-text">{currentQuestion?.hint}</p>
+            </div>
+            <div className="game-input-wrapper">
               {mode === 'ESTIMATION' ? (
-                <div className="estimation-grid">
-                  <input ref={lowerRef} type="number" value={lowerBound} onChange={e => setLowerBound(e.target.value)} 
-                    onKeyDown={e => e.key === 'Enter' && upperBound && processAnswer(currentQuestion.answer >= parseFloat(lowerBound) && currentQuestion.answer <= parseFloat(upperBound))} 
-                    className="est-input" placeholder="Min" />
-                  <input type="number" value={upperBound} onChange={e => setUpperBound(e.target.value)} 
-                    onKeyDown={e => e.key === 'Enter' && lowerBound && processAnswer(currentQuestion.answer >= parseFloat(lowerBound) && currentQuestion.answer <= parseFloat(upperBound))} 
-                    className="est-input" placeholder="Max" />
+                <div className="est-grid">
+                  <input ref={lowerRef} type="number" value={lowerBound} onChange={e=>setLowerBound(e.target.value)} onKeyDown={handleEstKey} className="est-input" placeholder="MIN" />
+                  <input type="number" value={upperBound} onChange={e=>setUpperBound(e.target.value)} onKeyDown={handleEstKey} className="est-input" placeholder="MAX" />
                 </div>
               ) : (
-                <input ref={inputRef} autoFocus type="text" value={mainInput} 
-                  onChange={e => { setMainInput(e.target.value); if (parseFloat(e.target.value) === currentQuestion?.answer) processAnswer(true); }} 
-                  className="main-input" placeholder="0" />
+                <input 
+                  ref={inputRef} autoFocus type="text" value={mainInput} 
+                  onChange={handleInputChange} onKeyDown={handleKeyDown}
+                  className="input-hero" placeholder="0" 
+                />
               )}
             </div>
           </div>
@@ -264,34 +329,28 @@ export default function QuantsDrill() {
 
       <footer className="footer-logs">
         <div className="log-box">
-          <div style={{ fontSize: '10px', fontWeight: 900, color: 'var(--zinc-600)', marginBottom: '16px', letterSpacing: '0.1em', borderBottom: '1px solid #111', paddingBottom: '10px' }}>
-             <BarChart3 size={12} style={{ display: 'inline', marginRight: '6px' }} /> EXECUTION LOGS
-          </div>
+          <div className="panel-header"><BarChart3 size={10} /> {t.telemetry}</div>
           {history.map((log, i) => (
-            <div key={i} className="log-item">
-              <span style={{ fontWeight: 900, color: 'white' }}>{log.q}</span>
-              <span style={{ color: log.status === 'SUCCESS' ? 'var(--emerald-500)' : 'var(--red-500)', fontWeight: 900 }}>
-                {log.status === 'SUCCESS' ? '[OK]' : '[FAIL]'} — {log.latency.toFixed(2)}s
-              </span>
+            <div key={i} className="log-row">
+              <span className="log-row-q">{log.q}</span>
+              <div className="log-status">
+                <span className={`log-status-badge ${log.status === 'SUCCESS' ? 'success' : 'failed'}`}>
+                  {log.status === 'SUCCESS' ? '[OK]' : '[FAIL]'}
+                </span>
+                <span className="log-latency">{log.latency.toFixed(2)}s</span>
+              </div>
             </div>
           ))}
-          {history.length === 0 && <p style={{ color: 'var(--zinc-700)', fontSize: '12px', fontStyle: 'italic' }}>Awaiting data stream...</p>}
         </div>
         <div className="log-box">
-          <div style={{ fontSize: '10px', fontWeight: 900, color: 'var(--zinc-600)', marginBottom: '16px', borderBottom: '1px solid #111', paddingBottom: '10px' }}>STATION DATA</div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px' }}>
-               <span>Total Solved</span><span style={{ color: 'white', fontWeight: 900 }}>{score}</span>
-             </div>
-             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px' }}>
-               <span>Avg Speed</span><span style={{ color: 'var(--blue-500)', fontWeight: 900 }}>{avgSpeed}s</span>
-             </div>
-             <div style={{ marginTop: '12px', borderTop: '1px solid #111', paddingTop: '12px' }}>
-               {/* INI ADALAH TOMBOL RESET DENGAN CLASS reset-btn */}
-               <button onClick={resetData} className="reset-btn">
-                 <Trash2 size={12} /> {t.reset}
-               </button>
-             </div>
+          <div className="panel-header"><Activity size={10} /> {t.sysData}</div>
+          <div className="panel-stats-list">
+             <div className="panel-stat-item"><span className="panel-stat-label">{t.totalSolved}</span><span className="panel-stat-value">{score}</span></div>
+             <div className="panel-stat-item"><span className="panel-stat-label">{t.avgSpeed}</span><span className="panel-stat-value blue">{avgSpeed}s</span></div>
+             <div className="panel-stat-item"><span className="panel-stat-label">Best ELO</span><span className="panel-stat-value">{bestElo}</span></div>
+             <button onClick={()=>confirm(t.confirmReset) && (localStorage.clear() || window.location.reload())} className="reset-link">
+               <Trash2 size={10} /> {t.reset}
+             </button>
           </div>
         </div>
       </footer>
