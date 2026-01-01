@@ -93,6 +93,20 @@ export default function App() {
   const inputRef = useRef(null);
   const lowerRef = useRef(null);
 
+  // Update theme-color for mobile
+  useEffect(() => {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', '#050505');
+    }
+    
+    return () => {
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', '#0A192F');
+      }
+    };
+  }, []);
+
   // Persistence (Load Data)
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
