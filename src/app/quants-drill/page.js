@@ -95,14 +95,20 @@ export default function App() {
 
   // Update theme-color for mobile
   useEffect(() => {
-    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', '#050505');
+    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    const originalColor = metaThemeColor ? metaThemeColor.getAttribute('content') : '#0A192F';
+    
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement('meta');
+      metaThemeColor.name = 'theme-color';
+      document.head.appendChild(metaThemeColor);
     }
+    
+    metaThemeColor.setAttribute('content', '#050505');
     
     return () => {
       if (metaThemeColor) {
-        metaThemeColor.setAttribute('content', '#0A192F');
+        metaThemeColor.setAttribute('content', originalColor);
       }
     };
   }, []);
