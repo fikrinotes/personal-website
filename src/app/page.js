@@ -50,7 +50,7 @@ export default function Home() {
               {/* <!-- Kartu Proyek 5 --> */}
               <ProjectCard title="Hill Cipher Encryption App" description="Sebuah aplikasi berbasis desktop untuk enkripsi pesan menggunakan metode Hill Cipher. Dikembangkan dengan bahasa pemrograman Python." projectUrl="https://github.com/fikrinotes/PowerfulPython/tree/main/Encryption%20App" />
               {/* <!-- Kartu Proyek 6 --> */}
-              <ProjectCard title="Daily Workout App" description="Satu-satunya aplikasi saya yang dikembangkan sepenuhnya oleh AI Gemini. Memiliki fitur jadwal olahraga harian, asupan nutrisi yang diperlukan, dan statistik harian." projectUrl="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/workout-app" />
+              <ProjectCard title="Daily Workout App" description="Satu-satunya aplikasi saya yang dikembangkan sepenuhnya oleh AI Gemini. Memiliki fitur jadwal olahraga harian, asupan nutrisi yang diperlukan, dan statistik harian." projectUrl="https://fikrinotes.netlify.app/javascriptproject-menu/workout-app/" />
           </section>
           
           {/* <!-- LOGS JOURNEY SECTION (TIMELINE) --> */}
