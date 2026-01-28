@@ -38,6 +38,41 @@ export default function ProjectPage() {
                         {/* <!-- DETAIL CARD 1: INTRUSION DETECTION MODEL --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
+                                <h3>BAYESIAN LSTM MODEL FOR SMART TRADING STRATEGY</h3>
+                                <div className="project-tags">
+                                    <span>PYTHON</span>
+                                    <span>PYTORCH</span>
+                                    <span>TIME-SERIES FORECASTING</span>
+                                </div>
+                            </div>
+                            <p>STATUS: OFFLINE (V1.1) | LAST UPDATE: 09-01-2026</p>
+                            <p>Model Probabilistik yang mampu memprediksi return aset kripto dan risiko masa depan untuk strategi trading yang cerdas menggunakan Bayesian LSTM. Berhasil mengelola risiko dan memperoleh return yang optimal pada kondisi pasar kripto yang volatil.</p>
+                            <div className="cta-group">
+                                <a href="https://huggingface.co/fikrimulyana/crypto-blstm-v1">VIEW MODEL AT HUGGINGFACE [ &gt;&gt; ]</a>
+                            </div>
+                        </div>
+
+                        {/* <!-- DETAIL CARD 1: INTRUSION DETECTION MODEL --> */}
+                        <div className="project-detail-card">
+                            <div className="project-header">
+                                <h3>QUANT DRILL</h3>
+                                <div className="project-tags">
+                                    <span>NEXT.JS</span>
+                                    <span>TOOLS</span>
+                                    <span>WEB APP</span>
+                                </div>
+                            </div>
+                            <p>STATUS: ONLINE (V1.1) | LAST UPDATE: 01-01-2026</p>
+                            <p>Aplikasi interaktif yang dirancang untuk melatih kemampuan <i>mental math</i> dengan sistem ELO dan level progresif. Dibuat oleh <i>quants</i> untuk <i>quants</i>.</p>
+                            <div className="cta-group">
+                                <a href="/quants-drill">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
+                                <a href="https://github.com/fikrinotes/personal-website/tree/main/src/app/quants-drill">GITHUB SOURCE [ &gt;&gt; ]</a>
+                            </div>
+                        </div>
+                        
+                        {/* <!-- DETAIL CARD 1: INTRUSION DETECTION MODEL --> */}
+                        <div className="project-detail-card">
+                            <div className="project-header">
                                 <h3>INTRUSION DETECTION MODEL</h3>
                                 <div className="project-tags">
                                     <span>PYTHON</span>

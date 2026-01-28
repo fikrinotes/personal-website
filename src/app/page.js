@@ -40,13 +40,13 @@ export default function Home() {
           {/* <!-- GRID PROYEK (BRUTALIST CARDS) --> */}
           <section className="projects-grid">
               {/* <!-- Kartu Proyek 1 --> */}
+              <ProjectCard title="Bayesian LSTM for Smart Trading Strategy" description="Model Probabilistik Bayesian LSTM untuk prediksi return aset kripto dan kuantifikasi ketidakpastiannya untuk sistem trading otonom." projectUrl="https://huggingface.co/fikrimulyana/crypto-blstm-v1" />
+              {/* <!-- Kartu Proyek 1 --> */}
               <ProjectCard title="Intrusion Detection Model" description="Model Deep Neural Network (DNN) untuk deteksi intrusi pada jaringan menggunakan Python dengan framework Tensorflow dan scikit-learn." projectUrl="https://github.com/fikrinotes/DNN-IDS" />
+              {/* <!-- Kartu Proyek 4 --> */}
+              <ProjectCard title="Quant Drill" description="Aplikasi web berbasis Next.js yang dirancang untuk melatih kecepatan aritmatika mental dan logika melalui sistem tingkat kesulitan adaptif berbasis ELO rating, terutama bagi calon quantitative trader." projectUrl="/quants-drill" />
               {/* <!-- Kartu Proyek 2 --> */}
               <ProjectCard title="Eid Blessing Hunter Game" description="Game interaktif bertema Idul Fitri yang dirancang untuk memeriahkan perayaan Idul Fitri 2025. " projectUrl="https://fikrinotes.github.io/eid-blessing-hunter-game/" />
-              {/* <!-- Kartu Proyek 3 --> */}
-              <ProjectCard title="Intergalactic War" description="Game sederhana yang dibangun menggunakan JavaScript dengan konsep perang antara manusia dan alien. " projectUrl="https://fikrinotes.netlify.app/javascriptproject-menu/intergalacticwar/" />
-              {/* <!-- Kartu Proyek 4 --> */}
-              <ProjectCard title="Boring Math" description="Apikasi web yang dikembangkan untuk menyelesaikan sistem persamaan linear (SPL) 2, 3 variabel, dan persamaan kuadrat." projectUrl="https://fikrinotes.netlify.app/javascriptproject-menu/boring_math/" />
               {/* <!-- Kartu Proyek 5 --> */}
               <ProjectCard title="Hill Cipher Encryption App" description="Sebuah aplikasi berbasis desktop untuk enkripsi pesan menggunakan metode Hill Cipher. Dikembangkan dengan bahasa pemrograman Python." projectUrl="https://github.com/fikrinotes/PowerfulPython/tree/main/Encryption%20App" />
               {/* <!-- Kartu Proyek 6 --> */}
