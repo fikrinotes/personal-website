@@ -214,7 +214,7 @@ export default function ProjectPage() {
                         {/* <!-- DETAIL CARD 8: Calculator --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
-                                <h3>Calculator</h3>
+                                <h3>CALCULATOR</h3>
                                 <div className="project-tags">
                                     <span>JAVASCRIPT</span>
                                     <span>ARITHMETIC OPERATION</span>
@@ -232,7 +232,7 @@ export default function ProjectPage() {
                         {/* <!-- DETAIL CARD 9: Caesar Cipher --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
-                                <h3>Caesar Cipher</h3>
+                                <h3>CAESAR CIPHER</h3>
                                 <div className="project-tags">
                                     <span>JAVASCRIPT</span>
                                     <span>CRYPTOGRAPHY</span>
@@ -250,7 +250,7 @@ export default function ProjectPage() {
                         {/* <!-- DETAIL CARD 10: BMI Calculator --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
-                                <h3>BMI Calculator</h3>
+                                <h3>BMI CALCULATOR</h3>
                                 <div className="project-tags">
                                     <span>JAVASCRIPT</span>
                                     <span>TOOLS</span>
@@ -267,7 +267,7 @@ export default function ProjectPage() {
                         {/* <!-- DETAIL CARD 10: BMI Calculator --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
-                                <h3>Guess-Number Game</h3>
+                                <h3>GUESS-NUMBER GAME</h3>
                                 <div className="project-tags">
                                     <span>JAVASCRIPT</span>
                                     <span>TOOLS</span>
