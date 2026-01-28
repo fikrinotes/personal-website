@@ -280,9 +280,6 @@ export default function ProjectPage() {
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/Guess_number_game">GITHUB SOURCE [ &gt;&gt; ]</a>
                             </div>
                         </div>
-
-
-                        {/* <!-- Tambahkan lebih banyak project-detail-card di sini --> */}
                     </section>
                 </div>
             </main>
