@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const NavLinkItem = ({ href, children, current = false }) => (
   <li className="nav-item">
-    <Link 
-      href={href} 
-      className={`nav-link ${current ? 'active' : ''}`} 
+    <Link
+      href={href}
+      className={`nav-link ${current ? 'active' : ''}`}
       aria-current={current ? 'page' : undefined}
     >
       {children}
@@ -37,12 +37,12 @@ export default function Navbar() {
   return (
     <>
       <header>
-          <div className="container">
-              <h2 className="logo">FIKRI NOTES</h2>
-              <nav>
-                  <a href="/">HOME</a> | <a href="/about">ABOUT</a> | <a href="https://fikrinotes.medium.com/">BLOG</a> | <a href="/projects-page">PROJECTS</a>
-              </nav>
-          </div>
+        <div className="container">
+          <h2 className="logo">FIKRI NOTES</h2>
+          <nav>
+            <a href="/">HOME</a> | <a href="/about">ABOUT</a> | <a href="https://fikrinotes.medium.com/">BLOG</a> | <a href="/projects-page">PROJECTS</a>
+          </nav>
+        </div>
       </header>
     </>
   );

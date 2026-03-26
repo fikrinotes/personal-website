@@ -20,9 +20,9 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang='id'>
-    <head>
-    <link rel="icon" href="logo_fix.png" height="250px" />
-    </head>
+      <head>
+        <link rel="icon" href="logo_fix.png" height="250px" />
+      </head>
       <body>
         {children}
       </body>

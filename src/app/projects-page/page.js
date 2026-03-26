@@ -11,16 +11,16 @@ import { Michroma, Space_Mono } from 'next/font/google';
 
 // Inisialisasi Michroma (hanya 1 weight)
 const michroma = Michroma({
-  weight: '400', // Wajib diisi karena Michroma hanya punya 1 weight
-  subsets: ['latin'],
-  variable: '--font-michroma', // Opsional, untuk CSS Variable
+    weight: '400', // Wajib diisi karena Michroma hanya punya 1 weight
+    subsets: ['latin'],
+    variable: '--font-michroma', // Opsional, untuk CSS Variable
 });
 
 // Inisialisasi Space Mono (memilih beberapa weight)
 const spaceMono = Space_Mono({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-space-mono', // Opsional, untuk CSS Variable
+    weight: ['400', '700'],
+    subsets: ['latin'],
+    variable: '--font-space-mono', // Opsional, untuk CSS Variable
 });
 
 export default function ProjectPage() {
@@ -30,7 +30,7 @@ export default function ProjectPage() {
             <main className="container">
                 {/* <!-- Struktur utama diubah, sidebar dihapus --> */}
                 <div className="project-page-layout">
-                    
+
                     {/* <!-- PROJECT LIST mengisi lebar penuh --> */}
                     <section className="project-list">
                         <h1>// PROJECT ARCHIVE LOG //</h1>
@@ -69,7 +69,7 @@ export default function ProjectPage() {
                                 <a href="https://github.com/fikrinotes/personal-website/tree/main/src/app/quants-drill">GITHUB SOURCE [ &gt;&gt; ]</a>
                             </div>
                         </div>
-                        
+
                         {/* <!-- DETAIL CARD 1: INTRUSION DETECTION MODEL --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
@@ -87,7 +87,7 @@ export default function ProjectPage() {
                                 <a href="https://github.com/fikrinotes/DNN-IDS">GITHUB SOURCE [ &gt;&gt; ]</a>
                             </div>
                         </div>
-                        
+
                         {/* <!-- DETAIL CARD 2: EID BLESSING HUNTER GAME --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
@@ -175,7 +175,7 @@ export default function ProjectPage() {
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/Boring_math">GITHUB SOURCE [ &gt;&gt; ]</a>
                             </div>
                         </div>
-                                                
+
                         {/* <!-- DETAIL CARD 6: WEATHER APP --> */}
                         <div className="project-detail-card">
                             <div className="project-header">

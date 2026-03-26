@@ -4,6 +4,7 @@
     --text-color: #64FFDA; /* Electric Aqua (Teks Utama/Lampu LED) */
     --accent-color: #FF5722; /* Deep Orange (Aksen/Peringatan) */
     --secondary-color: #CCD6F6; /* Light Steel Blue (Detail Sekunder) */
+    --highlight-color: #00D2FF; /* Neon Electric Blue (Sorotan Teks/Prestasi) */
     --dark-text: #0A192F; /* Teks gelap di atas tombol terang */
     /* PERUBAHAN FONT DI SINI */
     --font-h: 'Michroma', sans-serif;
@@ -63,6 +64,18 @@ a {
 a:hover {
     color: var(--accent-color);
     text-shadow: 0 0 8px var(--accent-color); 
+}
+
+/* Penekanan teks (Italic) dengan warna tema */
+i, em {
+    color: var(--text-color);
+    font-style: italic;
+}
+
+/* Penekanan teks (Bold) dengan warna highlight baru (Cyber Yellow) */
+b, strong {
+    color: var(--highlight-color);
+    font-weight: 700;
 }
 
 /* --- Header / Navigation --- */
@@ -165,6 +178,108 @@ nav a {
     color: var(--dark-text);
     border-color: var(--accent-color);
     text-shadow: none;
+}
+
+/* --- Achievements & Experience (Sci-Fi Info Panels) --- */
+.awards-milestones-section,
+.activity-experience-section {
+    margin-bottom: 60px;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.achievement-card {
+    background-color: rgba(10, 25, 47, 0.6); /* Transparan */
+    border-left: 3px solid var(--accent-color);
+    border-right: 1px solid rgba(204, 214, 246, 0.2);
+    border-top: 1px solid rgba(204, 214, 246, 0.2);
+    border-bottom: 1px solid rgba(204, 214, 246, 0.2);
+    padding: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid var(--accent-color);
+    border-right: 2px solid var(--accent-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.achievement-card::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid var(--accent-color);
+    border-left: 2px solid var(--accent-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    border-color: transparent;
+    background-color: rgba(10, 30, 60, 0.7); /* Transparan dengan sedikit kilau cyan di sekitarnya */
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1); /* Glow tipis saat melayang */
+    transform: translateY(-5px);
+}
+
+.achievement-card:hover::before,
+.achievement-card:hover::after {
+    opacity: 1;
+    border-color: var(--text-color);
+}
+
+.achievement-badge {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 0.85em;
+    font-family: var(--font-h);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.achievement-badge::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover .achievement-badge {
+    color: var(--text-color);
+}
+
+.achievement-card:hover .achievement-badge::after {
+    background-color: var(--text-color);
+    width: 60px;
+}
+
+.achievement-card p {
+    color: var(--secondary-color);
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* --- Logs Journey Section (Timeline) --- */

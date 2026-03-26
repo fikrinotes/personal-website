@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { 
-  TrendingUp, Zap, Trash2, BarChart3, BrainCircuit, Clock, Activity 
+import {
+  TrendingUp, Zap, Trash2, BarChart3, BrainCircuit, Clock, Activity
 } from 'lucide-react';
 
 // import style
@@ -75,9 +75,9 @@ export default function App() {
   const [bestElo, setBestElo] = useState(INITIAL_ELO);
   const [totalSessions, setTotalSessions] = useState(0);
   const [history, setHistory] = useState([]); // Sekarang akan dipersistensi
-  
-  const [gameState, setGameState] = useState('IDLE'); 
-  const [mode, setMode] = useState('ARITHMETIC'); 
+
+  const [gameState, setGameState] = useState('IDLE');
+  const [mode, setMode] = useState('ARITHMETIC');
   const [timeLeft, setTimeLeft] = useState(GAME_DURATION);
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(1);
@@ -130,7 +130,7 @@ export default function App() {
       else if (op === '*') { a = Math.floor(Math.random() * 12) + 2; b = Math.floor(Math.random() * (20 * scale)) + 2; q.answer = a * b; }
       else { b = Math.floor(Math.random() * 12) + 2; q.answer = Math.floor(Math.random() * (15 * scale)) + 1; a = b * q.answer; }
       q.text = `${a} ${op === '*' ? '×' : op === '/' ? '÷' : op} ${b}`;
-    } 
+    }
     else if (mode === 'ESTIMATION') {
       const types = ['PRODUCT', 'SQRT', 'POWER'];
       const type = types[Math.floor(Math.random() * types.length)];
@@ -151,7 +151,7 @@ export default function App() {
       const denoms = [4, 5, 8, 10, 16, 20, 25, 40, 50];
       const d = denoms[Math.floor(Math.random() * denoms.length)];
       const n = Math.floor(Math.random() * (d - 1)) + 1;
-      q.text = `Conv: ${n}/${d}`; 
+      q.text = `Conv: ${n}/${d}`;
       q.answer = Number((n / d).toFixed(4));
       q.hint = translations[lang].fracHint;
     }
@@ -167,18 +167,18 @@ export default function App() {
     setCurrentQuestion(q);
     startTimeRef.current = Date.now();
     setTimeout(() => {
-        if (mode === 'ESTIMATION') lowerRef.current?.focus();
-        else inputRef.current?.focus();
+      if (mode === 'ESTIMATION') lowerRef.current?.focus();
+      else inputRef.current?.focus();
     }, 50);
   }, [mode, level, t.hint, lang]);
 
   const processAnswer = (isCorrect) => {
     const latency = (Date.now() - startTimeRef.current) / 1000;
-    const K = isCorrect ? 24 : 80; 
+    const K = isCorrect ? 24 : 80;
     const expected = 1 / (1 + Math.pow(10, (1200 - elo) / 400));
     const bonus = isCorrect ? Math.max(0, (2 - latency) * 15) : 0;
     const newElo = Math.round(elo + K * ((isCorrect ? 1 : 0) - expected) + bonus);
-    
+
     setElo(newElo);
     if (newElo > bestElo) setBestElo(newElo);
 
@@ -245,7 +245,7 @@ export default function App() {
     }
   };
 
-  const avgSpeed = history.length > 0 ? (history.reduce((a,b) => a + b.latency, 0) / history.length).toFixed(2) : '0.00';
+  const avgSpeed = history.length > 0 ? (history.reduce((a, b) => a + b.latency, 0) / history.length).toFixed(2) : '0.00';
   const accuracy = history.length > 0 ? (history.filter(h => h.status === 'SUCCESS').length / history.length * 100).toFixed(0) + '%' : '100%';
 
 
@@ -258,7 +258,7 @@ export default function App() {
               <TrendingUp size={18} color="var(--blue)" />
               Quant <span>Drill</span>
             </div>
-            
+
             {gameState === 'PLAYING' && (
               <div className={`timer-nav ${timeLeft < 15 ? 'timer-crit' : ''}`}>
                 <Clock size={14} /> {timeLeft}s
@@ -266,8 +266,8 @@ export default function App() {
             )}
 
             <div className="lang-switcher">
-              <button className={`lang-btn ${lang==='EN'?'active':''}`} onClick={()=>setLang('EN')}>EN</button>
-              <button className={`lang-btn ${lang==='ID'?'active':''}`} onClick={()=>setLang('ID')}>ID</button>
+              <button className={`lang-btn ${lang === 'EN' ? 'active' : ''}`} onClick={() => setLang('EN')}>EN</button>
+              <button className={`lang-btn ${lang === 'ID' ? 'active' : ''}`} onClick={() => setLang('ID')}>ID</button>
             </div>
           </div>
         </nav>
@@ -295,13 +295,13 @@ export default function App() {
       <main className="main-view">
         {gameState === 'IDLE' ? (
           <div className="menu-card">
-            <BrainCircuit size={48} color="var(--blue)" style={{margin:'0 auto 16px'}} />
-            <h1 style={{color:'#fff', fontWeight:900, fontSize:'28px', letterSpacing:'-0.04em'}}>Quant <span style={{color:'var(--blue)'}}>Drill</span></h1>
+            <BrainCircuit size={48} color="var(--blue)" style={{ margin: '0 auto 16px' }} />
+            <h1 style={{ color: '#fff', fontWeight: 900, fontSize: '28px', letterSpacing: '-0.04em' }}>Quant <span style={{ color: 'var(--blue)' }}>Drill</span></h1>
             <div className="mode-list">
               {['ARITHMETIC', 'ESTIMATION', 'FRACTION', 'PROBABILITY'].map(m => (
                 <button key={m} className={`mode-btn ${mode === m ? 'active' : ''}`} onClick={() => setMode(m)}>
-                  <div style={{fontWeight:900, fontSize:'11px', textTransform:'uppercase'}}>{t[m.toLowerCase()]}</div>
-                  <div style={{fontSize: '8px', color: '#444', marginTop: '2px'}}>{t[m.toLowerCase() + 'Desc']}</div>
+                  <div style={{ fontWeight: 900, fontSize: '11px', textTransform: 'uppercase' }}>{t[m.toLowerCase()]}</div>
+                  <div style={{ fontSize: '8px', color: '#444', marginTop: '2px' }}>{t[m.toLowerCase() + 'Desc']}</div>
                 </button>
               ))}
             </div>
@@ -318,14 +318,14 @@ export default function App() {
             <div style={{ width: '100%', marginTop: '15px' }}>
               {mode === 'ESTIMATION' ? (
                 <div className="est-grid">
-                  <input ref={lowerRef} type="number" value={lowerBound} onChange={e=>setLowerBound(e.target.value)} onKeyDown={handleEstKey} className="est-input" placeholder="MIN" />
-                  <input type="number" value={upperBound} onChange={e=>setUpperBound(e.target.value)} onKeyDown={handleEstKey} className="est-input" placeholder="MAX" />
+                  <input ref={lowerRef} type="number" value={lowerBound} onChange={e => setLowerBound(e.target.value)} onKeyDown={handleEstKey} className="est-input" placeholder="MIN" />
+                  <input type="number" value={upperBound} onChange={e => setUpperBound(e.target.value)} onKeyDown={handleEstKey} className="est-input" placeholder="MAX" />
                 </div>
               ) : (
-                <input 
-                  ref={inputRef} autoFocus type="text" value={mainInput} 
+                <input
+                  ref={inputRef} autoFocus type="text" value={mainInput}
                   onChange={handleInputChange} onKeyDown={handleKeyDown}
-                  className="input-hero" placeholder="0" 
+                  className="input-hero" placeholder="0"
                 />
               )}
             </div>
@@ -335,28 +335,28 @@ export default function App() {
 
       <footer className="footer-logs">
         <div className="log-box">
-          <div style={{fontSize:'8px', fontWeight:900, color:'#444', marginBottom:'12px', borderBottom:'1px solid #111', paddingBottom:'6px'}}><BarChart3 size={10} style={{display:'inline', marginRight:'6px'}} /> {t.telemetry}</div>
+          <div style={{ fontSize: '8px', fontWeight: 900, color: '#444', marginBottom: '12px', borderBottom: '1px solid #111', paddingBottom: '6px' }}><BarChart3 size={10} style={{ display: 'inline', marginRight: '6px' }} /> {t.telemetry}</div>
           {history.map((log, i) => (
             <div key={i} className="log-row">
-              <span style={{fontWeight:900, color:'#fff'}}>{log.q}</span>
-              <div style={{display:'flex', gap:'12px'}}>
+              <span style={{ fontWeight: 900, color: '#fff' }}>{log.q}</span>
+              <div style={{ display: 'flex', gap: '12px' }}>
                 <span className={`log-status ${log.status === 'SUCCESS' ? 'ok' : 'fail'}`}>
                   {log.status === 'SUCCESS' ? '[OK]' : '[FAIL]'}
                 </span>
-                <span style={{color:'#333'}}>{log.latency.toFixed(2)}s</span>
+                <span style={{ color: '#333' }}>{log.latency.toFixed(2)}s</span>
               </div>
             </div>
           ))}
         </div>
-        <div className="log-box" style={{minHeight:'auto'}}>
-          <div style={{fontSize:'8px', fontWeight:900, color:'#444', marginBottom:'12px', borderBottom:'1px solid #111', paddingBottom:'6px'}}><Activity size={10} style={{display:'inline', marginRight:'6px'}} /> {t.sysData}</div>
+        <div className="log-box" style={{ minHeight: 'auto' }}>
+          <div style={{ fontSize: '8px', fontWeight: 900, color: '#444', marginBottom: '12px', borderBottom: '1px solid #111', paddingBottom: '6px' }}><Activity size={10} style={{ display: 'inline', marginRight: '6px' }} /> {t.sysData}</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '11px' }}>
-             <div style={{display:'flex', justifyContent:'space-between'}}><span>{t.totalSolved}</span><span style={{color:'#fff', fontWeight:900}}>{score}</span></div>
-             <div style={{display:'flex', justifyContent:'space-between'}}><span>{t.avgSpeed}</span><span style={{color:'var(--blue)', fontWeight:900}}>{avgSpeed}s</span></div>
-             <div style={{display:'flex', justifyContent:'space-between'}}><span>Best ELO</span><span style={{color:'#fff'}}>{bestElo}</span></div>
-             <button onClick={()=>confirm(t.confirmReset) && (localStorage.clear() || window.location.reload())} className="reset-link">
-               <Trash2 size={10} /> {t.reset}
-             </button>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>{t.totalSolved}</span><span style={{ color: '#fff', fontWeight: 900 }}>{score}</span></div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>{t.avgSpeed}</span><span style={{ color: 'var(--blue)', fontWeight: 900 }}>{avgSpeed}s</span></div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Best ELO</span><span style={{ color: '#fff' }}>{bestElo}</span></div>
+            <button onClick={() => confirm(t.confirmReset) && (localStorage.clear() || window.location.reload())} className="reset-link">
+              <Trash2 size={10} /> {t.reset}
+            </button>
           </div>
         </div>
       </footer>

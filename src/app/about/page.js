@@ -11,16 +11,16 @@ import { Michroma, Space_Mono } from 'next/font/google';
 
 // Inisialisasi Michroma (hanya 1 weight)
 const michroma = Michroma({
-  weight: '400', // Wajib diisi karena Michroma hanya punya 1 weight
-  subsets: ['latin'],
-  variable: '--font-michroma', // Opsional, untuk CSS Variable
+    weight: '400', // Wajib diisi karena Michroma hanya punya 1 weight
+    subsets: ['latin'],
+    variable: '--font-michroma', // Opsional, untuk CSS Variable
 });
 
 // Inisialisasi Space Mono (memilih beberapa weight)
 const spaceMono = Space_Mono({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-space-mono', // Opsional, untuk CSS Variable
+    weight: ['400', '700'],
+    subsets: ['latin'],
+    variable: '--font-space-mono', // Opsional, untuk CSS Variable
 });
 
 
@@ -30,20 +30,20 @@ export default function About() {
             <Navbar />
             <main className="container">
                 <section className="about-section">
-                    
+
                     <div className="about-header">
                         <h1>[ // PROFILE DATA LOADED // ]</h1>
                         <p>FILE NAME: FIKRI_M_SETIAWAN_V2.0.LOG</p>
                     </div>
 
-                     {/* PROFILE INFO CARD  */}
+                    {/* PROFILE INFO CARD  */}
                     <div className="profile-info">
                         <div className="profile-photo">
-                            <Image 
-                                src="/img/profile-pic.png" 
-                                alt="Fikri Mulyana Setiawan" 
-                                width={3} 
-                                height={4} 
+                            <Image
+                                src="/img/profile-pic.png"
+                                alt="Fikri Mulyana Setiawan"
+                                width={3}
+                                height={4}
                                 className="photo"
                                 layout="responsive"
                             />
@@ -51,10 +51,10 @@ export default function About() {
                         <div className="profile-details">
                             <h2>FIKRI MULYANA SETIAWAN</h2>
                             <p>
-                                Saya adalah seorang lulusan jurusan Matematika dengan fokus kajian pada penerapan <i>Deep Learning</i> dan <i>Explainable AI</i> (XAI) untuk pengambilan keputusan yang bijak dan terukur. Saya senang mengeksplorasi persimpangan antara Matematika dan Ilmu Komputer, serta bagaimana keduanya dapat bersinergi untuk menciptakan solusi inovatif.
+                                A <i>Master of Science</i> in Mathematics specializing in <i>Deep Learning</i> and <i>Explainable AI (XAI)</i>. My expertise lies at the intersection of rigorous mathematical modeling and scalable computing, focusing on creating transparent, high-stakes decision-making systems. Beyond research, I am a technical tinkerer and community mentor, dedicated to bridging the gap between complex theory and practical, real-world solutions.
                             </p>
                             <p>
-                                Saya tertarik untuk mempelajari banyak hal, mulai dari Kecerdasan Buatan, <i>Game Development</i>, pengembangan perangkat lunak, hingga teknologi Web3.
+                                I am deeply committed to exploring diverse technologic  al frontiers, ranging from <i>Artificial Intelligence</i> and <i>Game Development</i> to <i>Software Engineering</i> and <i>Web3 technologies</i>.
                             </p>
                             <div className="social-links">
                                 <a href="https://github.com/fikrinotes">GITHUB</a>
@@ -67,7 +67,7 @@ export default function About() {
                     {/* <!-- SKILLS MATRIX BARU --> */}
                     <h3>// TECHNICAL SKILLS //</h3>
                     <div className="skills-matrix">
-                        
+
                         <div className="skill-group">
                             <h4>DATA SCIENCE & AI</h4>
                             <div className="skill-list">
@@ -93,7 +93,7 @@ export default function About() {
                                 <span>PASCAL</span>
                             </div>
                         </div>
-                        
+
                         <div className="skill-group">
                             <h4>FRAMEWORKS & LIBRARIES</h4>
                             <div className="skill-list">
@@ -104,7 +104,7 @@ export default function About() {
                                 <span>TAILWIND CSS</span>
                             </div>
                         </div>
-                        
+
                         <div className="skill-group">
                             <h4>DATABASES & DATA INTEGRATION</h4>
                             <div className="skill-list">
@@ -122,7 +122,7 @@ export default function About() {
                                 <span>ETHEREUM</span>
                             </div>
                         </div>
-                        
+
                         <div className="skill-group">
                             <h4>TOOLS </h4>
                             <div className="skill-list">
@@ -132,30 +132,28 @@ export default function About() {
                                 <span>FIGMA</span>
                             </div>
                         </div>
-                        
+
                     </div>
                     {/* <!-- AKHIR SKILLS MATRIX --> */}
 
                     {/* <!-- HISTORY TIMELINE --> */}
                     <h3>// EDUCATION //</h3>
                     <div className="history-timeline">
-                        
+                        <div className="history-entry">
+                            <div className="entry-content">
+                                <h4>MASTER OF SCIENCE IN MATHEMATICS</h4>
+                                <span>UNIVERSITAS ANDALAS (2025 - 2027)</span>
+                                <p>Specialized in <i>Computational Mathematics</i> and <i>Financial Modeling</i>. Conducted advanced research on cryptocurrency asset performance analysis utilizing <i>Bayesian Long Short-Term Memory (BLSTM)</i> models.</p>
+                            </div>
+                        </div>
                         <div className="history-entry">
                             <div className="entry-content">
                                 <h4>BACHELOR OF SCIENCE IN MATHEMATICS</h4>
                                 <span>UNIVERSITAS ANDALAS (2021 - 2025)</span>
-                                <p>Memfokuskan studi pada <i>Deep Learning</i>, <i>Explainable AI</i> (XAI) dan analisis statistik. Meraih gelar penghargaan untuk prestasi pada berbagai kompetisi matematika tingkat nasional.</p>
+                                <p>Focused studies on <i>Deep Learning</i>, <i>Explainable AI (XAI)</i>, and <i>statistical analysis</i>. Awarded for excellence in various national-level mathematics competitions.</p>
                             </div>
                         </div>
-
-                        <div className="history-entry">
-                            <div className="entry-content">
-                                <h4>SENIOR HIGH SCHOOL</h4>
-                                <span>SMA NEGERI 4 PADANG (2018 - 2021)</span>
-                                <p>Berhasil menjuarai beberapa olimpiade fisika tingkat provinsi dan aktif mengikuti ekstra kurikuler debat. Mengisi waktu luang dengan mempelajari dasar-dasar pemrograman.</p>
-                            </div>
-                        </div>
-                    </div> 
+                    </div>
                 </section>
             </main>
 

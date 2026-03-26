@@ -4,6 +4,7 @@
     --text-color: #64FFDA; 
     --accent-color: #FF5722; 
     --secondary-color: #CCD6F6; 
+    --highlight-color: #00D2FF;
     --dark-text: #0A192F; 
     --font-h: 'Michroma', sans-serif;
     --font-body: 'Space Mono', monospace; 
@@ -73,6 +74,18 @@ a {
 a:hover {
     color: var(--accent-color);
     text-shadow: 0 0 8px var(--accent-color); 
+}
+
+/* Penekanan teks (Italic) dengan warna tema */
+i, em {
+    color: var(--text-color);
+    font-style: italic;
+}
+
+/* Penekanan teks (Bold) dengan warna highlight baru (Cyber Yellow) */
+b, strong {
+    color: var(--highlight-color);
+    font-weight: 700;
 }
 
 /* --- Header / Navigation --- */
