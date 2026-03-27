@@ -96,7 +96,9 @@
 }
 
 @keyframes pulse {
-    50% { opacity: 0.5; }
+    50% {
+        opacity: 0.5;
+    }
 }
 
 /* LANGUAGE SWITCHER */
@@ -170,16 +172,38 @@
     line-height: 1;
 }
 
-.stat-value.elo { color: var(--blue); }
-.stat-value.lvl { color: var(--amber); }
-.stat-value.streak { color: var(--purple); }
-.stat-value.accuracy { color: var(--green); }
+.stat-value.elo {
+    color: var(--blue);
+}
+
+.stat-value.lvl {
+    color: var(--amber);
+}
+
+.stat-value.streak {
+    color: var(--purple);
+}
+
+.stat-value.accuracy {
+    color: var(--green);
+}
 
 @media (min-width: 768px) {
-    .navbar { height: 60px; }
-    .stat-box { padding: 14px 10px; }
-    .stat-label { font-size: 8px; }
-    .stat-value { font-size: 18px; }
+    .navbar {
+        height: 60px;
+    }
+
+    .stat-box {
+        padding: 14px 10px;
+    }
+
+    .stat-label {
+        font-size: 8px;
+    }
+
+    .stat-value {
+        font-size: 18px;
+    }
 }
 
 /* MAIN VIEW */
@@ -202,7 +226,9 @@
 }
 
 @media (max-width: 768px) {
-    .question-container { margin-top: 15px; }
+    .question-container {
+        margin-top: 15px;
+    }
 }
 
 .question-text {
@@ -215,7 +241,9 @@
 }
 
 @media (min-width: 768px) {
-    .question-text { font-size: 84px; }
+    .question-text {
+        font-size: 84px;
+    }
 }
 
 .hint-text {
@@ -247,7 +275,10 @@
 }
 
 @media (min-width: 768px) {
-    .input-hero { font-size: 110px; border-bottom-width: 6px; }
+    .input-hero {
+        font-size: 110px;
+        border-bottom-width: 6px;
+    }
 }
 
 .input-hero:focus {
@@ -304,7 +335,9 @@
 }
 
 @media (min-width: 640px) {
-    .mode-list { grid-template-columns: 1fr 1fr; }
+    .mode-list {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .mode-btn {
@@ -366,7 +399,9 @@
 }
 
 @media (min-width: 768px) {
-    .footer-logs { grid-template-columns: 2fr 1.2fr; }
+    .footer-logs {
+        grid-template-columns: 2fr 1.2fr;
+    }
 }
 
 .log-box {
@@ -408,10 +443,17 @@
     font-weight: 900;
 }
 
-.log-status-badge.success { color: var(--green); }
-.log-status-badge.failed { color: var(--red); }
+.log-status-badge.success {
+    color: var(--green);
+}
 
-.log-latency { color: #333; }
+.log-status-badge.failed {
+    color: var(--red);
+}
+
+.log-latency {
+    color: #333;
+}
 
 .panel-header {
     font-size: 8px;
@@ -448,7 +490,9 @@
     font-weight: 900;
 }
 
-.panel-stat-value.blue { color: var(--blue); }
+.panel-stat-value.blue {
+    color: var(--blue);
+}
 
 .reset-link {
     color: var(--amber);

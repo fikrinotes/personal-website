@@ -38,7 +38,7 @@ export default function ProjectPage() {
                         {/* <!-- DETAIL CARD 1: INTRUSION DETECTION MODEL --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
-                                <h3>BAYESIAN LSTM MODEL FOR SMART TRADING STRATEGY</h3>
+                                <h3>PROBABILISTIC BAYESIAN LSTM FOR AUTONOMOUS CRYPTO TRADING</h3>
                                 <div className="project-tags">
                                     <span>PYTHON</span>
                                     <span>PYTORCH</span>
@@ -46,7 +46,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: OFFLINE (V1.1) | LAST UPDATE: 09-01-2026</p>
-                            <p>Model Probabilistik yang mampu memprediksi return aset kripto dan risiko masa depan untuk strategi trading yang cerdas menggunakan Bayesian LSTM. Berhasil mengelola risiko dan memperoleh return yang optimal pada kondisi pasar kripto yang volatil.</p>
+                            <p>A probabilistic forecasting model designed to predict cryptocurrency returns and future risks for intelligent trading strategies. Utilizing Bayesian Long Short-Term Memory (BLSTM), the model successfully manages risk and achieves optimized returns even within volatile market conditions.</p>
                             <div className="cta-group">
                                 <a href="https://huggingface.co/fikrimulyana/crypto-blstm-v1">VIEW MODEL AT HUGGINGFACE [ &gt;&gt; ]</a>
                             </div>
@@ -55,7 +55,7 @@ export default function ProjectPage() {
                         {/* <!-- DETAIL CARD 1: INTRUSION DETECTION MODEL --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
-                                <h3>QUANT DRILL</h3>
+                                <h3>QUANT DRILL: ADAPTIVE MENTAL ARITHMETIC FOR QUANTS</h3>
                                 <div className="project-tags">
                                     <span>NEXT.JS</span>
                                     <span>TOOLS</span>
@@ -63,7 +63,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V1.1) | LAST UPDATE: 01-01-2026</p>
-                            <p>Aplikasi interaktif yang dirancang untuk melatih kemampuan <i>mental math</i> dengan sistem ELO dan level progresif. Dibuat oleh <i>quants</i> untuk <i>quants</i>.</p>
+                            <p>A Next.js web application designed for quantitative traders to sharpen mental math and logical speed. Features an ELO-based adaptive difficulty system to tailor challenges to the user's skill level.</p>
                             <div className="cta-group">
                                 <a href="/quants-drill">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/personal-website/tree/main/src/app/quants-drill">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -73,7 +73,7 @@ export default function ProjectPage() {
                         {/* <!-- DETAIL CARD 1: INTRUSION DETECTION MODEL --> */}
                         <div className="project-detail-card">
                             <div className="project-header">
-                                <h3>INTRUSION DETECTION MODEL</h3>
+                                <h3>EXPLAINABLE DNN FOR NETWORK INTRUSION DETECTION</h3>
                                 <div className="project-tags">
                                     <span>PYTHON</span>
                                     <span>TENSOWFLOW</span>
@@ -81,7 +81,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: OFFLINE (V1.1) | LAST UPDATE: 31-07-2025</p>
-                            <p>Model Deep Neural Network (DNN) untuk deteksi intrusi pada jaringan menggunakan Python dengan framework Tensorflow dan scikit-learn. Model ini mencapai metrik evaluasi yang memuaskan, dengan akurasi hingga 99%.</p>
+                            <p>A high-performance Deep Neural Network (DNN) model for network security, integrating SHAP (Shapley Additive Explanations) to provide model transparency. Published in a Scopus Q2-indexed journal (2026).</p>
                             <div className="cta-group">
                                 <a href="http://scholar.unand.ac.id/502315/">VIEW REPORT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/DNN-IDS">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -99,7 +99,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V1.1) | LAST UPDATE: 17-06-2025</p>
-                            <p>Game interaktif bertema Idul Fitri yang dirancang untuk memeriahkan perayaan Idul Fitri 2025. Pemain mengumpulkan <i>blessing items</i> (uang dan kue) sambil menghindari <i>obstacle</i> (serangga). Menggabungkan konsep gamifikasi dengan nuansa budaya lokal, dilengkapi sistem poin dan histori poin tertinggi.</p>
+                            <p>An engaging interactive web game developed to celebrate Eid al-Fitr 2025. Experience the festive spirit through this entertaining mini-game.</p>
                             <div className="cta-group">
                                 <a href="https://fikrinotes.github.io/eid-blessing-hunter-game/">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/eid-app">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -116,7 +116,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V1.0) | LAST UPDATE: 2020-09-10</p>
-                            <p>Game sederhana yang dibangun menggunakan JavaScript dengan konsep perang antara manusia dan alien. Proyek ini menggunakan konsep mekanisme game penting seperti pergerakan objek dan <i>collision detection</i>.</p>
+                            <p>A classic arcade-style game built with JavaScript, focusing on fundamental game engine mechanics such as object movement, sprite rendering, and collision detection.</p>
                             <div className="cta-group">
                                 <a href="https://fikrinotes.netlify.app/javascriptproject-menu/intergalacticwar/">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/IntergalacticWar">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -128,12 +128,12 @@ export default function ProjectPage() {
                             <div className="project-header">
                                 <h3>HILL CIPHER ENCRYPTION APP</h3>
                                 <div className="project-tags">
-                                    <span>JAVASCRIPT</span>
-                                    <span>GAME DEV</span>
+                                    <span>PYTHON</span>
+                                    <span>ALGEBRA</span>
                                 </div>
                             </div>
                             <p>STATUS: OFFLINE (V1.0) | LAST UPDATE: 10-08-2022</p>
-                            <p>Sebuah aplikasi berbasis desktop untuk enkripsi pesan menggunakan metode Hill Cipher. Dikembangkan dengan bahasa pemrograman Python. Aplikasi ini merupakan luaran tambahan untuk tugas proyek saya di kampus pada mata kuliah Aljabar Linear Terapan 1.</p>
+                            <p>A desktop-based application for secure message encryption using the Hill Cipher method. Developed as a practical implementation of Applied Linear Algebra concepts to demonstrate matrix-based cryptography.</p>
                             <div className="cta-group">
                                 <a href="https://github.com/fikrinotes/PowerfulPython/blob/main/Encryption%20App/readme.md">LEARN MORE [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/PowerfulPython/tree/main/Encryption%20App">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -151,7 +151,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V1.1) | LAST UPDATE: 03-11-2025</p>
-                            <p>Satu-satunya aplikasi saya yang dikembangkan sepenuhnya oleh AI Gemini. Memiliki fitur jadwal olahraga harian, asupan nutrisi yang diperlukan, dan statistik harian.</p>
+                            <p>An experimental fitness application developed through advanced AI-assisted engineering (Gemini AI). Features automated workout scheduling, nutritional intake tracking, and daily progress analytics.</p>
                             <div className="cta-group">
                                 <a href="https://fikrinotes.netlify.app/javascriptproject-menu/workout-app/">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/workout-app">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -169,7 +169,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V1.0) | LAST UPDATE: 06-08-2021</p>
-                            <p>Apikasi web yang dikembangkan untuk menyelesaikan sistem persamaan linear (SPL) 2, 3 variabel, dan persamaan kuadrat. Proyek ini berfokus pada implementasi konsep aljabar linier untuk perhitungan solusi yang efisien.</p>
+                            <p>A web application designed to solve systems of linear equations (2 and 3 variables) and quadratic equations. This project focuses on implementing linear algebra concepts for efficient solution calculation.</p>
                             <div className="cta-group">
                                 <a href="https://fikrinotes.netlify.app/javascriptproject-menu/boring_math/">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/Boring_math">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -186,7 +186,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V2.1) | LAST UPDATE: 07-04-2021</p>
-                            <p>Aplikasi web yang menggunakan data API eksternal (OpenWeatherMap) untuk mendapatkan informasi kondisi cuaca global secara <i>real-time</i> di berbagai kota, dilengkapi dengan informasi penting seperti kelembaban dan kecepatan angin. Proyek kunci untuk eksplorasi integrasi data.</p>
+                            <p>A web application that utilizes external API data (OpenWeatherMap) to retrieve real-time global weather conditions for various cities, complete with essential information such as humidity and wind speed. A key project for exploring data integration.</p>
                             <div className="cta-group">
                                 <a href="#">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="#">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -204,7 +204,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V1.1) | LAST UPDATE: 06-08-2021</p>
-                            <p>Aplikasi stopwatch sederhana yang diimplementasikan dengan JavaScript untuk mengukur waktu dengan desain UI yang intuitif. project ini dikembangkan untuk mempelajari konsep manajemen waktu pada JavaScript.</p>
+                            <p>A simple stopwatch application implemented with JavaScript to measure time with an intuitive UI design. This project was developed to learn time management concepts in JavaScript.</p>
                             <div className="cta-group">
                                 <a href="https://fikrinotes.netlify.app/javascriptproject-menu/stopwatch/">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/Stopwatch">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -222,7 +222,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V1.1) | LAST UPDATE: 06-08-2021</p>
-                            <p>Aplikasi kalkulator dengan fitur operasi aritmatika dasar dengan desain UI yang intuitif. Proyek ini dikembangkan untuk mempelajari konsep operasi aritmatika pada JavaScript sekaligus mempelajari penggunaan CSS untuk implementasi desain UI yang kompleks.</p>
+                            <p>A calculator application with basic arithmetic operations and an intuitive UI design. This project was developed to learn arithmetic operations in JavaScript while also learning to use CSS for complex UI implementation.</p>
                             <div className="cta-group">
                                 <a href="https://fikrinotes.netlify.app/javascriptproject-menu/calculator/">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/Calculator">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -240,7 +240,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V1.1) | LAST UPDATE: 06-08-2021</p>
-                            <p>Tools enkripsi pesan sederhana menggunakan metode Caesar Cipher dengan kunci enkripsi <i>custom</i>. Proyek ini dikembangkan untuk menguji pemahaman saya mengenai konsep dan cara kerja metode Caesar Cipher untuk enkripsi pesan.</p>
+                            <p>A simple message encryption tool using the Caesar Cipher method with a custom encryption key. This project was developed to test my understanding of the concepts and workings of the Caesar Cipher method for message encryption.</p>
                             <div className="cta-group">
                                 <a href="https://fikrinotes.netlify.app/javascriptproject-menu/caesarcipher/">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/CaesarCipher">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -257,7 +257,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V1.1) | LAST UPDATE: 04-08-2021</p>
-                            <p>Kalkulator BMI untuk menghitung indeks massa tubuh berdasarkan berat dan tinggi badan dan dapat digunakan sebagai acuan awal untuk menilai kondisi fisik.</p>
+                            <p>A BMI calculator to calculate body mass index based on weight and height and can be used as an initial reference to assess physical condition.</p>
                             <div className="cta-group">
                                 <a href="https://fikrinotes.netlify.app/javascriptproject-menu/caesarcipher/">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/CaesarCipher">GITHUB SOURCE [ &gt;&gt; ]</a>
@@ -274,7 +274,7 @@ export default function ProjectPage() {
                                 </div>
                             </div>
                             <p>STATUS: ONLINE (V1.1) | LAST UPDATE: 07-08-2021</p>
-                            <p>Game tebak angka dimana program akan memilih 1 angka acak dari 1-100, dan pemain diminta untuk menebak angka tersebut. Pemain diizinkan menebak angka berulang kali, dengan pengurangan poin sebesar -5 setiap kali tebakan salah. Game ini dikembangkan untuk menguji seberapa cepat algoritma <i>Binary Search</i> dapat membantu proses pencarian angka tebakan yang tepat.</p>
+                            <p>A number guessing game where the program selects a random number between 1-100, and the player is asked to guess the number. Players are allowed to guess the number repeatedly, with a penalty of -5 points for each incorrect guess. This game was developed to test how quickly the <i>Binary Search</i> algorithm can assist in the process of finding the correct guess number.</p>
                             <div className="cta-group">
                                 <a href="https://fikrinotes.netlify.app/javascriptproject-menu/guess_number_game/">VIEW LIVE PROJECT [ &gt;&gt; ]</a>
                                 <a href="https://github.com/fikrinotes/fikrinotes.github.io/tree/master/Javascriptproject-menu/Guess_number_game">GITHUB SOURCE [ &gt;&gt; ]</a>

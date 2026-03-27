@@ -4,9 +4,9 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <>
-    <footer>
-        <p>// COPYRIGHT © 2025 FIKRI MULYANA SETIAWAN // V2.1 //</p>
-    </footer>
+      <footer>
+        <p>// COPYRIGHT © 2026 FIKRI MULYANA SETIAWAN // V2.2 //</p>
+      </footer>
     </>
   );
 }

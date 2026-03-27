@@ -1,13 +1,13 @@
 /* --- CSS VARIABLES (Industrial Blueprint Palet) --- */
 :root {
-    --bg-color: #0A192F; 
-    --text-color: #64FFDA; 
-    --accent-color: #FF5722; 
-    --secondary-color: #CCD6F6; 
+    --bg-color: #0A192F;
+    --text-color: #64FFDA;
+    --accent-color: #FF5722;
+    --secondary-color: #CCD6F6;
     --highlight-color: #00D2FF;
-    --dark-text: #0A192F; 
+    --dark-text: #0A192F;
     --font-h: 'Michroma', sans-serif;
-    --font-body: 'Space Mono', monospace; 
+    --font-body: 'Space Mono', monospace;
 }
 
 /* --- Global Styles --- */
@@ -21,12 +21,14 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-body);
-    line-height: 1.7; /* Meningkatkan keterbacaan */
+    line-height: 1.7;
+    /* Meningkatkan keterbacaan */
     font-size: 16px;
     /* Membuat grid tipis menggunakan linear-gradient */
-    background-image: linear-gradient(to right, rgba(204, 214, 246, 0.05) 1px, transparent 1px), 
-                      linear-gradient(to bottom, rgba(204, 214, 246, 0.05) 1px, transparent 1px);
-    background-size: 25px 25px; /* Ukuran kotak grid (25x25 piksel) */
+    background-image: linear-gradient(to right, rgba(204, 214, 246, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(204, 214, 246, 0.05) 1px, transparent 1px);
+    background-size: 25px 25px;
+    /* Ukuran kotak grid (25x25 piksel) */
     /* -------------------------------------- */
 }
 
@@ -38,10 +40,11 @@ body {
 }
 
 main.container {
-    max-width: 1000px; 
+    max-width: 1000px;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--font-h);
     color: var(--text-color);
     text-transform: uppercase;
@@ -49,7 +52,8 @@ h1, h2 {
 }
 
 h3 {
-    font-family: var(--font-body); /* Judul sub-section lebih lembut */
+    font-family: var(--font-body);
+    /* Judul sub-section lebih lembut */
     color: var(--text-color);
     margin-bottom: 15px;
     font-size: 1.5em;
@@ -73,17 +77,19 @@ a {
 /* Efek hover ala Sci-Fi */
 a:hover {
     color: var(--accent-color);
-    text-shadow: 0 0 8px var(--accent-color); 
+    text-shadow: 0 0 8px var(--accent-color);
 }
 
 /* Penekanan teks (Italic) dengan warna tema */
-i, em {
+i,
+em {
     color: var(--text-color);
     font-style: italic;
 }
 
 /* Penekanan teks (Bold) dengan warna highlight baru (Cyber Yellow) */
-b, strong {
+b,
+strong {
     color: var(--highlight-color);
     font-weight: 700;
 }
@@ -91,7 +97,8 @@ b, strong {
 /* --- Header / Navigation --- */
 header {
     padding: 20px 0;
-    border-bottom: 3px solid var(--accent-color); /* Garis pemisah oranye tegas */
+    border-bottom: 3px solid var(--accent-color);
+    /* Garis pemisah oranye tegas */
     background-color: var(--bg-color);
     position: sticky;
     top: 0;
@@ -106,7 +113,8 @@ header .container {
 
 .logo {
     font-size: 1.8em;
-    color: var(--accent-color); /* Logo menggunakan warna oranye */
+    color: var(--accent-color);
+    /* Logo menggunakan warna oranye */
 }
 
 nav a {
@@ -146,7 +154,8 @@ nav a {
     padding: 30px;
     box-shadow: 6px 6px 0px var(--accent-color);
     align-items: flex-start;
-    overflow: hidden; /* Cegah konten keluar dari border */
+    overflow: hidden;
+    /* Cegah konten keluar dari border */
 }
 
 .profile-photo {
@@ -166,7 +175,8 @@ nav a {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-    min-width: 0; /* Penting untuk flex items agar bisa shrink */
+    min-width: 0;
+    /* Penting untuk flex items agar bisa shrink */
 }
 
 .profile-details h2 {
@@ -191,8 +201,10 @@ nav a {
     padding: 8px 15px;
     font-size: 0.8em;
     letter-spacing: 1px;
-    white-space: nowrap; /* Cegah teks tombol terpotong */
-    flex-shrink: 0; /* Cegah tombol mengecil */
+    white-space: nowrap;
+    /* Cegah teks tombol terpotong */
+    flex-shrink: 0;
+    /* Cegah tombol mengecil */
 }
 
 /* --- Timeline History (Digunakan untuk Edukasi/Karir) --- */
@@ -293,23 +305,48 @@ footer p {
 
 /* --- Media Queries untuk Responsif --- */
 @media (max-width: 768px) {
+
     /* Header */
-    header .container { flex-direction: column; text-align: center; }
-    nav { margin-top: 15px; }
-    nav a { margin: 0 10px; }
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
 
     /* About */
-    .about-header h1 { font-size: 2em; }
-    .profile-info { 
-        flex-direction: column; 
+    .about-header h1 {
+        font-size: 2em;
+    }
+
+    .profile-info {
+        flex-direction: column;
         text-align: center;
         gap: 20px;
-        padding: 20px; /* Kurangi padding pada mobile */
+        padding: 20px;
+        /* Kurangi padding pada mobile */
     }
-    .profile-photo { margin: 0 auto 20px; }
+
+    .profile-photo {
+        margin: 0 auto 20px;
+    }
+
     .profile-details h2 {
-        font-size: 1.4em; /* Kurangi ukuran font pada mobile */
+        font-size: 1.4em;
+        /* Kurangi ukuran font pada mobile */
     }
-    .history-entry { padding-left: 15px; }
-    .history-entry::before { left: -10px; }
+
+    .history-entry {
+        padding-left: 15px;
+    }
+
+    .history-entry::before {
+        left: -10px;
+    }
 }
