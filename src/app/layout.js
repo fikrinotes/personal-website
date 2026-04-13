@@ -11,6 +11,10 @@ export const metadata = {
     description: "Fikri Mulyana Setiawan is a programmer and front-end developer, and I like to automate everything with my programming skills.",
     images: "https://fikrinotes.netlify.app/metaTag.jpg",
   },
+  metadataBase: new URL('https://fikrinotes.vercel.app'),
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export const viewport = {
@@ -21,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='id'>
       <head>
-        <link rel="icon" href="logo_fix.png" height="250px" />
+        <link rel="icon" href="logo_web.png" height="250px" />
       </head>
       <body>
         {children}
