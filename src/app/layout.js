@@ -2,7 +2,7 @@ export const metadata = {
   title: "Fikri Notes - Thought And Ideas Of Fikri Mulyana Setiawan",
   description: "Fikri Mulyana Setiawan is a machine learning enthusiast, programmer and front-end developer.",
   verification: {
-    google: "JJt8s-bShfClSaIksS6BEHrJq7gFqDScaqKzsULaaH4",
+    google: "ZW_ELbSo4aSuoLGt-cbgIrAbmhijokPtVlmk9CvLrqo",
   },
   openGraph: {
     type: "website",
