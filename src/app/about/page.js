@@ -97,6 +97,7 @@ export default function About() {
                         <div className="skill-group">
                             <h4>FRAMEWORKS & LIBRARIES</h4>
                             <div className="skill-list">
+                                <span>FAST-API</span>
                                 <span>REACT</span>
                                 <span>NEXT JS</span>
                                 <span>NODE JS (BASIC)</span>
