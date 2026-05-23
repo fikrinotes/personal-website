@@ -143,7 +143,7 @@ export default function About() {
                         <div className="history-entry">
                             <div className="entry-content">
                                 <h4>MASTER OF SCIENCE IN MATHEMATICS</h4>
-                                <span>UNIVERSITAS ANDALAS (2025 - 2027)</span>
+                                <span>UNIVERSITAS ANDALAS (2025 - 2026)</span>
                                 <p>Specialized in <i>Computational Mathematics</i> and <i>Financial Modeling</i>. Conducted advanced research on cryptocurrency asset performance analysis utilizing <i>Bayesian Long Short-Term Memory (BLSTM)</i> models.</p>
                             </div>
                         </div>
