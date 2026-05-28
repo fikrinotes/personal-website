@@ -74,16 +74,16 @@ export default function Home() {
                 <span className="dot"></span>
               </div>
               <div className="mini-browser-viewport">
-                <img 
-                  src="/img/temenin-website.png" 
-                  alt="Temen.in Website Preview" 
+                <img
+                  src="/img/temenin-website.png"
+                  alt="Temen.in Website Preview"
                   className="mini-browser-image"
                 />
               </div>
             </div>
 
             <p>
-              Temen.in is my first ever startup. Founded in 2024. Temen.in is a digital ecosystem for student community to help them in every stage of their campus life from orientation to graduation and beyond.
+              Temen.in is my first ever startup. Founded in 2024, Temen.in is a digital ecosystem for student community to help them in every stage of their campus life from orientation to graduation and beyond.
             </p>
             <p>
               Tutorial classes, the first temen.in services, gained repetitive orders from students from Andalas University. Now and in the future, Temen.in will expand to provide more services for students, such as digital tools for academic activities, past exam paper archives, and connecting all student through the platform for information transparency!
