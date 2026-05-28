@@ -359,6 +359,181 @@ footer {
     color: var(--secondary-color);
 }
 
+/* --- Full Width Neon Startup Section --- */
+.neon-startup-section {
+    background-color: var(--text-color);
+    /* Neon Aqua/Green from palette (#64FFDA) */
+    color: var(--dark-text);
+    /* Deep Navy dark text for high contrast readability (#0A192F) */
+    padding: 80px 0;
+    width: 100%;
+    margin-bottom: 60px;
+    /* Space between neon section and awards section */
+    border-top: 4px solid var(--accent-color);
+    border-bottom: 4px solid var(--accent-color);
+    box-shadow: inset 0 8px 0px rgba(10, 25, 47, 0.05), inset 0 -8px 0px rgba(10, 25, 47, 0.05);
+}
+
+.neon-startup-title {
+    font-family: var(--font-h);
+    font-size: 2.2em;
+    color: var(--dark-text) !important;
+    /* Force dark text on neon background */
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.neon-startup-content p {
+    color: var(--dark-text) !important;
+    /* Ensure paragraph readability */
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    max-width: 900px;
+    text-align: justify;
+}
+
+.neon-startup-cta {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--bg-color);
+    /* Deep Navy dark button */
+    color: var(--text-color) !important;
+    /* Aqua text */
+    font-family: var(--font-h);
+    font-size: 0.95em;
+    font-weight: bold;
+    border: 2px solid var(--dark-text);
+    box-shadow: 6px 6px 0px var(--accent-color);
+    transition: all 0.2s ease;
+}
+
+.neon-startup-cta:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-text) !important;
+    box-shadow: 6px 6px 0px var(--bg-color);
+    transform: translate(-2px, -2px);
+    text-shadow: none;
+}
+
+/* View All Projects Button Container */
+.view-all-projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px; /* Pull closer to projects grid */
+    margin-bottom: 80px; /* Space before startup section */
+}
+
+.view-all-projects-btn {
+    display: inline-block;
+    padding: 16px 36px;
+    background-color: var(--bg-color); /* Deep Navy dark background */
+    color: var(--text-color); /* Electric Aqua */
+    font-family: var(--font-h);
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 3px solid var(--text-color); /* Electric Aqua border */
+    box-shadow: 8px 8px 0px var(--accent-color); /* Neon Orange offset shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.view-all-projects-btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 12px 12px 0px var(--accent-color);
+    background-color: var(--text-color); /* Aqua background */
+    color: var(--dark-text); /* Deep Navy text */
+    text-shadow: none;
+}
+
+/* Startup Content Wrap with Clearfix (Prevents shadow clipping) */
+.neon-startup-content::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Mini Browser Mockup Window for image (Float layout - Shrinkwrap) */
+.mini-browser-mockup {
+    float: right;
+    border: 3px solid var(--dark-text);
+    background-color: transparent;
+    box-shadow: 8px 8px 0px var(--accent-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: fit-content; /* Automatically wraps exactly to the image's naturally scaled width */
+    max-width: 55%; /* Keeps it to a balanced size relative to the container */
+    min-width: 280px;
+    margin-left: 28px;
+    margin-right: 12px; /* Buffer space to render the 12px hover shadow perfectly */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-browser-mockup:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 12px 12px 0px var(--accent-color);
+}
+
+.mini-browser-bar {
+    height: 28px;
+    background-color: rgba(10, 25, 47, 0.1);
+    border-bottom: 2px solid var(--dark-text);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 8px;
+}
+
+.mini-browser-bar .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--dark-text);
+    opacity: 0.5;
+}
+
+.mini-browser-viewport {
+    position: relative;
+    background-color: transparent;
+    display: block;
+    overflow: hidden;
+    line-height: 0; /* Eliminates baseline empty whitespace space under the image */
+}
+
+.mini-browser-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* Adapts perfectly and proportionally to the real aspect ratio of your image */
+    display: block;
+}
+
+/* Responsive adjustments for neon startup section */
+@media (max-width: 768px) {
+    .neon-startup-section {
+        padding: 50px 0;
+    }
+
+    .neon-startup-title {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+
+    .neon-startup-content p {
+        font-size: 1em;
+        line-height: 1.7;
+    }
+
+    .mini-browser-mockup {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 30px auto;
+    }
+}
+
 /* --- Media Queries untuk Responsif --- */
 @media (max-width: 992px) {
     .hero h1 {

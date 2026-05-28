@@ -53,6 +53,50 @@ export default function Home() {
           <ProjectCard title="AI-Generated Fitness & Nutrition App" description="An experimental project developed entirely through AI-human collaboration (Gemini). Features automated workout scheduling, nutritional tracking, and daily progress analytics." projectUrl="https://fikrinotes.netlify.app/javascriptproject-menu/workout-app/" />
         </section>
 
+        {/* <!-- VIEW ALL PROJECTS CTA --> */}
+        <div className="view-all-projects-container">
+          <a href="/projects-page" className="view-all-projects-btn">
+            VIEW ALL PROJECTS &gt;&gt;
+          </a>
+        </div>
+      </main>
+
+      {/* <!-- FULL WIDTH NEON STARTUP SECTION --> */}
+      <section className="neon-startup-section">
+        <div className="container">
+          <h2 className="neon-startup-title">// MY STARTUP: TEMEN.IN //</h2>
+          <div className="neon-startup-content">
+            {/* Image mockup goes first so it naturally wraps on desktop, and stacks on top on mobile */}
+            <div className="mini-browser-mockup">
+              <div className="mini-browser-bar">
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+              </div>
+              <div className="mini-browser-viewport">
+                <img 
+                  src="/img/temenin-website.png" 
+                  alt="Temen.in Website Preview" 
+                  className="mini-browser-image"
+                />
+              </div>
+            </div>
+
+            <p>
+              Temen.in is my first ever startup. Founded in 2024. Temen.in is a digital ecosystem for student community to help them in every stage of their campus life from orientation to graduation and beyond.
+            </p>
+            <p>
+              Tutorial classes, the first temen.in services, gained repetitive orders from students from Andalas University. Now and in the future, Temen.in will expand to provide more services for students, such as digital tools for academic activities, past exam paper archives, and connecting all student through the platform for information transparency!
+            </p>
+            <a href="https://temenin.fikrinotes.com" target="_blank" rel="noopener noreferrer" className="neon-startup-cta">
+              EXPLORE TEMEN.IN &gt;&gt;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <main className="container">
+
         {/* <!-- AWARDS & MILESTONES SECTION --> */}
         <section className="awards-milestones-section">
           <h2>// AWARDS & MILESTONES //</h2>
