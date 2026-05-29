@@ -34,23 +34,21 @@ export default function Home() {
         <section className="hero">
           <h1> &gt;&gt; HELLO WORLD:</h1>
           <h2>FIKRI MULYANA SETIAWAN</h2>
-          <p>//AI RESEARCHER // DATA SCIENTIST // QUANTITATIVE ANALYST//</p>
+          <div className={`hero-ceo ${spaceMono.className}`}>
+            <span className="status-dot"></span>
+            Founder @ <a href="https://temenin.fikrinotes.com" target="_blank" rel="noopener noreferrer">Temen.in</a>
+          </div>
+          <p>// AI RESEARCHER // DATA SCIENTIST // QUANTITATIVE ANALYST //</p>
         </section>
 
         {/* <!-- GRID PROYEK (BRUTALIST CARDS) --> */}
         <section className="projects-grid">
           {/* <!-- Kartu Proyek 1 --> */}
           <ProjectCard title="Probabilistic Bayesian LSTM for Autonomous Crypto Trading" description="Leveraging Bayesian Deep Learning to predict cryptocurrency returns and quantifying predictive uncertainty. Developed as a Master’s Thesis research." projectUrl="https://huggingface.co/fikrimulyana/crypto-blstm-v1" />
-          {/* <!-- Kartu Proyek 1 --> */}
-          <ProjectCard title="Explainable DNN for Network Intrusion Detection" description="A high-performance Deep Neural Network (DNN) model for network security, integrating SHAP (Shapley Additive Explanations) to provide model transparency. Published in a Scopus Q2-indexed journal (2026)." projectUrl="https://github.com/fikrinotes/DNN-IDS" />
-          {/* <!-- Kartu Proyek 4 --> */}
-          <ProjectCard title="Quant Drill: Adaptive Mental Arithmetic for Quants" description="A Next.js web application designed for quantitative traders to sharpen mental math and logical speed. Features an ELO-based adaptive difficulty system to tailor challenges to the user's skill level." projectUrl="/quants-drill" />
           {/* <!-- Kartu Proyek 2 --> */}
+          <ProjectCard title="Explainable DNN for Network Intrusion Detection" description="A high-performance Deep Neural Network (DNN) model for network security, integrating SHAP (Shapley Additive Explanations) to provide model transparency. Published in a Scopus Q2-indexed journal (2026)." projectUrl="https://github.com/fikrinotes/DNN-IDS" />
+          {/* <!-- Kartu Proyek 3 --> */}
           <ProjectCard title="Eid Blessing Hunter Game" description="An engaging interactive web game developed to celebrate Eid al-Fitr 2025. Experience the festive spirit through this entertaining mini-game. " projectUrl="https://fikrinotes.github.io/eid-blessing-hunter-game/" />
-          {/* <!-- Kartu Proyek 5 --> */}
-          <ProjectCard title="Hill Cipher Encryption App" description="A desktop security tool implementing matrix-based cryptography. Developed in Python to demonstrate the practical application of linear algebra in secure message transmission." projectUrl="https://github.com/fikrinotes/PowerfulPython/tree/main/Encryption%20App" />
-          {/* <!-- Kartu Proyek 6 --> */}
-          <ProjectCard title="AI-Generated Fitness & Nutrition App" description="An experimental project developed entirely through AI-human collaboration (Gemini). Features automated workout scheduling, nutritional tracking, and daily progress analytics." projectUrl="https://fikrinotes.netlify.app/javascriptproject-menu/workout-app/" />
         </section>
 
         {/* <!-- VIEW ALL PROJECTS CTA --> */}
