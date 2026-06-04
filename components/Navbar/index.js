@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="container">
           <h2 className="logo">FIKRI NOTES</h2>
           <nav>
-            <a href="/">HOME</a> | <a href="/about">ABOUT</a> | <a href="https://fikrinotes.medium.com/">BLOG</a> | <a href="/projects-page">PROJECTS</a>
+            <a href="/">HOME</a> | <a href="/about">ABOUT</a> | <a href="https://read.fikrinotes.com/">BLOG</a> | <a href="/projects-page">PROJECTS</a>
           </nav>
         </div>
       </header>
