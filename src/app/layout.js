@@ -6,12 +6,13 @@ export const metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://fikrinotes.vercel.app/",
+    url: "https://fikrinotes.com/",
+    siteName: "Fikri Notes",
     title: "Fikri Notes - Thought And Ideas Of Fikri Mulyana Setiawan",
     description: "Fikri Mulyana Setiawan is a programmer and front-end developer, and I like to automate everything with my programming skills.",
     images: "https://fikrinotes.netlify.app/metaTag.jpg",
   },
-  metadataBase: new URL('https://fikrinotes.vercel.app'),
+  metadataBase: new URL('https://fikrinotes.com'),
   alternates: {
     canonical: '/',
   },
