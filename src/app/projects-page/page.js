@@ -35,6 +35,22 @@ export default function ProjectPage() {
                     <section className="project-list">
                         <h1>// PROJECT ARCHIVE LOG //</h1>
 
+                        <div className="project-detail-card">
+                            <div className="project-header">
+                                <h3>Chronos-BTCIDR-V1</h3>
+                                <div className="project-tags">
+                                    <span>FastAPI</span>
+                                    <span>PYTORCH</span>
+                                    <span>TIME-SERIES FORECASTING</span>
+                                </div>
+                            </div>
+                            <p>STATUS: OFFLINE (V1.1) | LAST UPDATE: 12-06-2026</p>
+                            <p>A REST API that serve Bayesian LSTM model to forecast BTC-IDR return and quantifying its risks. Built with FastAPI. Designed for professional trader and Quantitative Analyst.</p>
+                            <div className="cta-group">
+                                <a href="https://github.com/fikrinotes/Chronos-BTCIDR-v1">GITHUB SOURCE [ &gt;&gt; ]</a>
+                            </div>
+                        </div>
+
                         {/* <!-- DETAIL CARD 1: INTRUSION DETECTION MODEL --> */}
                         <div className="project-detail-card">
                             <div className="project-header">

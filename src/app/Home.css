@@ -141,8 +141,10 @@ nav a {
     align-items: center;
     font-size: 1.05em;
     color: var(--secondary-color);
-    background-color: rgba(100, 255, 218, 0.15); /* Lebih solid */
-    border: 1px solid rgba(100, 255, 218, 0.3); /* Border diperjelas */
+    background-color: rgba(100, 255, 218, 0.15);
+    /* Lebih solid */
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    /* Border diperjelas */
     padding: 8px 18px;
     margin-top: 20px;
     margin-bottom: 5px;
@@ -153,7 +155,8 @@ nav a {
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-color: #10b981; /* Clean green dot */
+    background-color: #10b981;
+    /* Clean green dot */
     border-radius: 50%;
     margin-right: 12px;
     animation: pulse-glow 2.5s infinite ease-in-out;
@@ -164,10 +167,12 @@ nav a {
         box-shadow: 0 0 2px rgba(16, 185, 129, 0.2);
         opacity: 0.4;
     }
+
     50% {
         box-shadow: 0 0 12px rgba(16, 185, 129, 0.9);
         opacity: 1;
     }
+
     100% {
         box-shadow: 0 0 2px rgba(16, 185, 129, 0.2);
         opacity: 0.4;
@@ -475,28 +480,36 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -20px; /* Pull closer to projects grid */
-    margin-bottom: 80px; /* Space before startup section */
+    margin-top: -20px;
+    /* Pull closer to projects grid */
+    margin-bottom: 80px;
+    /* Space before startup section */
 }
 
 .view-all-projects-btn {
     display: inline-block;
     padding: 10px 22px;
-    background-color: var(--bg-color); /* Deep Navy dark background */
-    color: var(--text-color); /* Electric Aqua */
+    background-color: var(--bg-color);
+    /* Deep Navy dark background */
+    color: var(--text-color);
+    /* Electric Aqua */
     font-family: var(--font-h);
     font-size: 0.9em;
     font-weight: bold;
-    border: 2px solid var(--text-color); /* Electric Aqua border */
-    box-shadow: 4px 4px 0px var(--accent-color); /* Neon Orange offset shadow */
+    border: 2px solid var(--text-color);
+    /* Electric Aqua border */
+    box-shadow: 4px 4px 0px var(--accent-color);
+    /* Neon Orange offset shadow */
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .view-all-projects-btn:hover {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0px var(--accent-color);
-    background-color: var(--text-color); /* Aqua background */
-    color: var(--dark-text); /* Deep Navy text */
+    background-color: var(--text-color);
+    /* Aqua background */
+    color: var(--dark-text);
+    /* Deep Navy text */
     text-shadow: none;
 }
 
@@ -516,11 +529,14 @@ footer {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    width: fit-content; /* Automatically wraps exactly to the image's naturally scaled width */
-    max-width: 55%; /* Keeps it to a balanced size relative to the container */
+    width: fit-content;
+    /* Automatically wraps exactly to the image's naturally scaled width */
+    max-width: 55%;
+    /* Keeps it to a balanced size relative to the container */
     min-width: 280px;
     margin-left: 28px;
-    margin-right: 12px; /* Buffer space to render the 12px hover shadow perfectly */
+    margin-right: 12px;
+    /* Buffer space to render the 12px hover shadow perfectly */
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -553,13 +569,15 @@ footer {
     background-color: transparent;
     display: block;
     overflow: hidden;
-    line-height: 0; /* Eliminates baseline empty whitespace space under the image */
+    line-height: 0;
+    /* Eliminates baseline empty whitespace space under the image */
 }
 
 .mini-browser-image {
     width: 100%;
     max-width: 100%;
-    height: auto; /* Adapts perfectly and proportionally to the real aspect ratio of your image */
+    height: auto;
+    /* Adapts perfectly and proportionally to the real aspect ratio of your image */
     display: block;
 }
 

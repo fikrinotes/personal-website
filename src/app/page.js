@@ -44,11 +44,11 @@ export default function Home() {
         {/* <!-- GRID PROYEK (BRUTALIST CARDS) --> */}
         <section className="projects-grid">
           {/* <!-- Kartu Proyek 1 --> */}
-          <ProjectCard title="Probabilistic Bayesian LSTM for Autonomous Crypto Trading" description="Leveraging Bayesian Deep Learning to predict cryptocurrency returns and quantifying predictive uncertainty. Developed as a Master’s Thesis research." projectUrl="https://huggingface.co/fikrimulyana/crypto-blstm-v1" />
+          <ProjectCard title="Chronos-BTCIDR-V1" description="A REST API that serve Bayesian LSTM model to forecast BTC-IDR return and quantifying its risks. Built with FastAPI. Designed for professional trader and Quantitative Analyst." projectUrl="https://github.com/fikrinotes/Chronos-BTCIDR-v1" />
           {/* <!-- Kartu Proyek 2 --> */}
-          <ProjectCard title="Explainable DNN for Network Intrusion Detection" description="A high-performance Deep Neural Network (DNN) model for network security, integrating SHAP (Shapley Additive Explanations) to provide model transparency. Published in a Scopus Q2-indexed journal (2026)." projectUrl="https://github.com/fikrinotes/DNN-IDS" />
+          <ProjectCard title="Probabilistic Bayesian LSTM for Autonomous Crypto Trading" description="Leveraging Bayesian Deep Learning to predict cryptocurrency returns and quantifying predictive uncertainty. Developed as a Master’s Thesis research." projectUrl="https://huggingface.co/fikrimulyana/crypto-blstm-v1" />
           {/* <!-- Kartu Proyek 3 --> */}
-          <ProjectCard title="Eid Blessing Hunter Game" description="An engaging interactive web game developed to celebrate Eid al-Fitr 2025. Experience the festive spirit through this entertaining mini-game. " projectUrl="https://fikrinotes.github.io/eid-blessing-hunter-game/" />
+          <ProjectCard title="Explainable DNN for Network Intrusion Detection" description="A high-performance Deep Neural Network (DNN) model for network security, integrating SHAP (Shapley Additive Explanations) to provide model transparency. Published in a Scopus Q3-indexed journal (2026)." projectUrl="https://github.com/fikrinotes/DNN-IDS" />
         </section>
 
         {/* <!-- VIEW ALL PROJECTS CTA --> */}
